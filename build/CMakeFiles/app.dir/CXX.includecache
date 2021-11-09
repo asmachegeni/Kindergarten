@@ -14,6 +14,14 @@ string
 string
 -
 
+../include/ManageKids.hpp
+string
+-
+Child.hpp
+../include/Child.hpp
+Login.hpp
+../include/Login.hpp
+
 ../include/Manager.hpp
 string
 -
@@ -39,6 +47,18 @@ iomanip
 -
 fstream
 -
+Login.hpp
+/mnt/d/kindergarten/src/Login.hpp
+
+/mnt/d/kindergarten/src/ManageKids.cpp
+iostream
+-
+string
+-
+ManageKids.hpp
+/mnt/d/kindergarten/src/ManageKids.hpp
+Child.hpp
+/mnt/d/kindergarten/src/Child.hpp
 Login.hpp
 /mnt/d/kindergarten/src/Login.hpp
 
@@ -71,4 +91,6 @@ Manager.hpp
 /mnt/d/kindergarten/src/Manager.hpp
 Child.hpp
 /mnt/d/kindergarten/src/Child.hpp
+ManageKids.hpp
+/mnt/d/kindergarten/src/ManageKids.hpp
 

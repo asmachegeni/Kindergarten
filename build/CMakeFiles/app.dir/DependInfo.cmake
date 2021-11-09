@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/d/kindergarten/src/Child.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Child.cpp.o"
   "/mnt/d/kindergarten/src/Login.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Login.cpp.o"
+  "/mnt/d/kindergarten/src/ManageKids.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/ManageKids.cpp.o"
   "/mnt/d/kindergarten/src/Manager.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Manager.cpp.o"
   "/mnt/d/kindergarten/src/main.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/main.cpp.o"
   )

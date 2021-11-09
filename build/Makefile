@@ -177,6 +177,33 @@ src/Login.cpp.s:
 	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Login.cpp.s
 .PHONY : src/Login.cpp.s
 
+src/ManageKids.o: src/ManageKids.cpp.o
+
+.PHONY : src/ManageKids.o
+
+# target to build an object file
+src/ManageKids.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/ManageKids.cpp.o
+.PHONY : src/ManageKids.cpp.o
+
+src/ManageKids.i: src/ManageKids.cpp.i
+
+.PHONY : src/ManageKids.i
+
+# target to preprocess a source file
+src/ManageKids.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/ManageKids.cpp.i
+.PHONY : src/ManageKids.cpp.i
+
+src/ManageKids.s: src/ManageKids.cpp.s
+
+.PHONY : src/ManageKids.s
+
+# target to generate assembly for a file
+src/ManageKids.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/ManageKids.cpp.s
+.PHONY : src/ManageKids.cpp.s
+
 src/Manager.o: src/Manager.cpp.o
 
 .PHONY : src/Manager.o
@@ -246,6 +273,9 @@ help:
 	@echo "... src/Login.o"
 	@echo "... src/Login.i"
 	@echo "... src/Login.s"
+	@echo "... src/ManageKids.o"
+	@echo "... src/ManageKids.i"
+	@echo "... src/ManageKids.s"
 	@echo "... src/Manager.o"
 	@echo "... src/Manager.i"
 	@echo "... src/Manager.s"

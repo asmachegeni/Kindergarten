@@ -7,11 +7,17 @@ CMakeFiles/app.dir/src/Child.cpp.o: ../src/Child.cpp
 CMakeFiles/app.dir/src/Login.cpp.o: ../include/Login.hpp
 CMakeFiles/app.dir/src/Login.cpp.o: ../src/Login.cpp
 
+CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/Child.hpp
+CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/Login.hpp
+CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/ManageKids.hpp
+CMakeFiles/app.dir/src/ManageKids.cpp.o: ../src/ManageKids.cpp
+
 CMakeFiles/app.dir/src/Manager.cpp.o: ../include/Manager.hpp
 CMakeFiles/app.dir/src/Manager.cpp.o: ../src/Manager.cpp
 
 CMakeFiles/app.dir/src/main.cpp.o: ../include/Child.hpp
 CMakeFiles/app.dir/src/main.cpp.o: ../include/Login.hpp
+CMakeFiles/app.dir/src/main.cpp.o: ../include/ManageKids.hpp
 CMakeFiles/app.dir/src/main.cpp.o: ../include/Manager.hpp
 CMakeFiles/app.dir/src/main.cpp.o: ../src/main.cpp
 
