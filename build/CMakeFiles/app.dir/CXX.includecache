@@ -6,7 +6,33 @@
 
 #IncludeRegexTransform: 
 
+../include/Login.hpp
+string
+-
+
+/mnt/d/kindergarten/src/Login.cpp
+iostream
+-
+string
+-
+iomanip
+-
+fstream
+-
+Login.hpp
+/mnt/d/kindergarten/src/Login.hpp
+
 /mnt/d/kindergarten/src/main.cpp
 iostream
 -
+string
+-
+fstream
+-
+iomanip
+-
+cstdlib
+-
+Login.hpp
+/mnt/d/kindergarten/src/Login.hpp
 

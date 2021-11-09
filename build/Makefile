@@ -123,6 +123,33 @@ app/fast:
 	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
+src/Login.o: src/Login.cpp.o
+
+.PHONY : src/Login.o
+
+# target to build an object file
+src/Login.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Login.cpp.o
+.PHONY : src/Login.cpp.o
+
+src/Login.i: src/Login.cpp.i
+
+.PHONY : src/Login.i
+
+# target to preprocess a source file
+src/Login.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Login.cpp.i
+.PHONY : src/Login.cpp.i
+
+src/Login.s: src/Login.cpp.s
+
+.PHONY : src/Login.s
+
+# target to generate assembly for a file
+src/Login.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Login.cpp.s
+.PHONY : src/Login.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... app"
 	@echo "... edit_cache"
+	@echo "... src/Login.o"
+	@echo "... src/Login.i"
+	@echo "... src/Login.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
