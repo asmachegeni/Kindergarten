@@ -6,9 +6,29 @@
 
 #IncludeRegexTransform: 
 
+../include/Child.hpp
+string
+-
+
 ../include/Login.hpp
 string
 -
+
+../include/Manager.hpp
+string
+-
+
+/mnt/d/kindergarten/src/Child.cpp
+iostream
+-
+string
+-
+iomanip
+-
+fstream
+-
+Child.hpp
+/mnt/d/kindergarten/src/Child.hpp
 
 /mnt/d/kindergarten/src/Login.cpp
 iostream
@@ -21,6 +41,18 @@ fstream
 -
 Login.hpp
 /mnt/d/kindergarten/src/Login.hpp
+
+/mnt/d/kindergarten/src/Manager.cpp
+iostream
+-
+string
+-
+iomanip
+-
+fstream
+-
+Manager.hpp
+/mnt/d/kindergarten/src/Manager.hpp
 
 /mnt/d/kindergarten/src/main.cpp
 iostream
@@ -35,4 +67,8 @@ cstdlib
 -
 Login.hpp
 /mnt/d/kindergarten/src/Login.hpp
+Manager.hpp
+/mnt/d/kindergarten/src/Manager.hpp
+Child.hpp
+/mnt/d/kindergarten/src/Child.hpp
 

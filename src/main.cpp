@@ -4,6 +4,8 @@
 #include <iomanip>
 #include <cstdlib>
 #include "Login.hpp"
+#include "Manager.hpp"
+#include "Child.hpp"
 using namespace std;
 // struct info
 // {

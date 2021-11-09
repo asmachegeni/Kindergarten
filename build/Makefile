@@ -123,6 +123,33 @@ app/fast:
 	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
+src/Child.o: src/Child.cpp.o
+
+.PHONY : src/Child.o
+
+# target to build an object file
+src/Child.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Child.cpp.o
+.PHONY : src/Child.cpp.o
+
+src/Child.i: src/Child.cpp.i
+
+.PHONY : src/Child.i
+
+# target to preprocess a source file
+src/Child.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Child.cpp.i
+.PHONY : src/Child.cpp.i
+
+src/Child.s: src/Child.cpp.s
+
+.PHONY : src/Child.s
+
+# target to generate assembly for a file
+src/Child.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Child.cpp.s
+.PHONY : src/Child.cpp.s
+
 src/Login.o: src/Login.cpp.o
 
 .PHONY : src/Login.o
@@ -149,6 +176,33 @@ src/Login.s: src/Login.cpp.s
 src/Login.cpp.s:
 	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Login.cpp.s
 .PHONY : src/Login.cpp.s
+
+src/Manager.o: src/Manager.cpp.o
+
+.PHONY : src/Manager.o
+
+# target to build an object file
+src/Manager.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Manager.cpp.o
+.PHONY : src/Manager.cpp.o
+
+src/Manager.i: src/Manager.cpp.i
+
+.PHONY : src/Manager.i
+
+# target to preprocess a source file
+src/Manager.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Manager.cpp.i
+.PHONY : src/Manager.cpp.i
+
+src/Manager.s: src/Manager.cpp.s
+
+.PHONY : src/Manager.s
+
+# target to generate assembly for a file
+src/Manager.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Manager.cpp.s
+.PHONY : src/Manager.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -186,9 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... app"
 	@echo "... edit_cache"
+	@echo "... src/Child.o"
+	@echo "... src/Child.i"
+	@echo "... src/Child.s"
 	@echo "... src/Login.o"
 	@echo "... src/Login.i"
 	@echo "... src/Login.s"
+	@echo "... src/Manager.o"
+	@echo "... src/Manager.i"
+	@echo "... src/Manager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
