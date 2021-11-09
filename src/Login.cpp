@@ -61,15 +61,15 @@ state Login::searchUser(string username, string password)
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-string Login::getFirstName()
+string Login::getFirstName() const
 {
-    return user.firstName;
+    return this->user.firstName;
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-string Login::getLastName()
+string Login::getLastName() const
 {
-    return user.lastName;
+    return this->user.lastName;
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------

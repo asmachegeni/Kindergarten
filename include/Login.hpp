@@ -24,8 +24,8 @@ public:
     Login();
     ~Login();
     state searchUser(std::string, std::string);
-    std::string getFirstName();
-    std::string getLastName();
+    std::string getFirstName() const;
+    std::string getLastName() const;
 
 private:
     info user;
