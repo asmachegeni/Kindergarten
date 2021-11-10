@@ -11,6 +11,10 @@ public:
     void editChild(std::string);
     void printChild();
     bool searchUser(std::string);
+    bool ValidationName(std::string);
+    bool ValidationAge(int);
+    bool ValidationPassword(std::string);
+    bool ValidationUsername(std::string);
 
 private:
     info user;

@@ -10,14 +10,18 @@ using namespace std;
 //---------------------------------------------------------------------
 bool ManageKids::searchUser(string username)
 {
-
     ifstream Data("./userData.txt", ios::in); //open file
     if (Data.is_open())
     {
-        Data.clear();
+        Data.clear(); //to read the correct information from the file
         while (1)
         {
-            Data >> setw(20) >> user.firstName >> setw(20) >> user.lastName >> setw(4) >> user.age >> setw(15) >> user.username >> setw(15) >> user.password; //read data from file
+            //read data from file
+            Data >> setw(20) >> user.firstName >>
+                setw(20) >> user.lastName >>
+                setw(4) >> user.age >>
+                setw(15) >> user.username >>
+                setw(15) >> user.password;
             if (Data.eof())
             {
                 break;
@@ -56,15 +60,23 @@ void ManageKids::addChild()
         cin >> temp.username;
         cout << "Enter password:";
         cin >> temp.password;
-        if (temp.username[0] == 'C' && temp.username[1] == 'H' && temp.username.length() == 6)
+        if (ValidationUsername(temp.username))
         {
             if (!searchUser(temp.username))
             {
-                Data.clear();
-                // Data.seekp(0, ios::end);
-                Data
-                    << left << setw(20) << temp.firstName << setw(20) << temp.lastName << setw(4) << temp.age << setw(15) << temp.username << setw(15) << temp.password << endl;
-                //read data from file
+                if (ValidationName(temp.firstName) && ValidationName(temp.lastName))
+                {
+                    if (ValidationAge(temp.age) && ValidationPassword(temp.password))
+                    {
+                        Data.clear();
+                        //write new data in file
+                        Data << left << setw(20) << temp.firstName
+                             << setw(20) << temp.lastName
+                             << setw(4) << temp.age
+                             << setw(15) << temp.username
+                             << setw(15) << temp.password << endl;
+                    }
+                }
             }
             else
             {
@@ -90,7 +102,7 @@ void ManageKids::deleteChild(string username)
         if (Data.is_open())
         {
             Data.clear();
-            ofstream Datacopy("./userDatacopy.txt", ios::out); //open file
+            ofstream Datacopy("./userDatacopy.txt", ios::out); //open new file
             if (!Datacopy.is_open())
             {
                 cout << "Can not open the file!!!!!" << endl;
@@ -98,7 +110,12 @@ void ManageKids::deleteChild(string username)
 
             while (1)
             {
-                Data >> setw(20) >> user.firstName >> setw(20) >> user.lastName >> setw(4) >> user.age >> setw(15) >> user.username >> setw(15) >> user.password; //read data from file
+                //read data from file
+                Data >> setw(20) >> user.firstName >>
+                    setw(20) >> user.lastName >>
+                    setw(4) >> user.age >>
+                    setw(15) >> user.username >>
+                    setw(15) >> user.password;
                 if (Data.eof())
                 {
                     break;
@@ -107,7 +124,12 @@ void ManageKids::deleteChild(string username)
                 {
                     if (user.username != username)
                     {
-                        Datacopy << setw(20) << user.firstName << setw(20) << user.lastName << setw(4) << user.age << setw(15) << user.username << setw(15) << user.password << endl; //read data from file
+                        //write data in new file
+                        Datacopy << setw(20) << user.firstName
+                                 << setw(20) << user.lastName
+                                 << setw(4) << user.age
+                                 << setw(15) << user.username
+                                 << setw(15) << user.password << endl;
                     }
                 }
             }
@@ -133,14 +155,19 @@ void ManageKids::editChild(string username)
         if (Data.is_open())
         {
             Data.clear();
-            ofstream Datacopy("./userDatacopy.txt", ios::out); //open file
+            ofstream Datacopy("./userDatacopy.txt", ios::out); //open new file
             if (!Datacopy.is_open())
             {
                 cout << "Can not open the file!!!!!" << endl;
             }
             while (1)
             {
-                Data >> setw(20) >> user.firstName >> setw(20) >> user.lastName >> setw(4) >> user.age >> setw(15) >> user.username >> setw(15) >> user.password; //read data from file
+                //read data from file
+                Data >> setw(20) >> user.firstName >>
+                    setw(20) >> user.lastName >>
+                    setw(4) >> user.age >>
+                    setw(15) >> user.username >>
+                    setw(15) >> user.password;
                 if (Data.eof())
                 {
                     break;
@@ -155,7 +182,7 @@ void ManageKids::editChild(string username)
                         cout << "3:Firstname" << endl;
                         cout << "4:Lastname" << endl;
                         cout << "5:Age" << endl;
-                        int Selection;
+                        int Selection; //to receive user selection
                         cin >> Selection;
                         string change;
                         int age;
@@ -164,7 +191,7 @@ void ManageKids::editChild(string username)
                         case 1:
                         {
                             cin >> change;
-                            if (change[0] == 'C' && change[1] == 'H' && change.length() == 5)
+                            if (ValidationUsername(change))
                             {
                                 user.username = change;
                             }
@@ -177,25 +204,37 @@ void ManageKids::editChild(string username)
                         case 2:
                         {
                             cin >> change;
-                            user.password = change;
+                            if (ValidationPassword(change))
+                            {
+                                user.password = change;
+                            }
                             break;
                         }
                         case 3:
                         {
                             cin >> change;
-                            user.firstName = change;
+                            if (ValidationName(change))
+                            {
+                                user.firstName = change;
+                            }
                             break;
                         }
                         case 4:
                         {
                             cin >> change;
-                            user.lastName = change;
+                            if (ValidationName(change))
+                            {
+                                user.lastName = change;
+                            }
                             break;
                         }
                         case 5:
                         {
                             cin >> age;
-                            user.age = age;
+                            if (ValidationAge(age))
+                            {
+                                user.age = age;
+                            }
                             break;
                         }
                         default:
@@ -204,11 +243,20 @@ void ManageKids::editChild(string username)
                             break;
                         }
                         }
-                        Datacopy << left << setw(20) << user.firstName << setw(20) << user.lastName << setw(4) << user.age << setw(15) << user.username << setw(15) << user.password << endl; //read data from file
+                        Datacopy << left << setw(20) << user.firstName
+                                 << setw(20) << user.lastName
+                                 << setw(4) << user.age
+                                 << setw(15) << user.username
+                                 << setw(15) << user.password
+                                 << endl; //read data from file
                     }
                     else
                     {
-                        Datacopy << left << setw(20) << user.firstName << setw(20) << user.lastName << setw(4) << user.age << setw(15) << user.username << setw(15) << user.password << endl; //read data from file
+                        Datacopy << left << setw(20) << user.firstName
+                                 << setw(20) << user.lastName
+                                 << setw(4) << user.age
+                                 << setw(15) << user.username
+                                 << setw(15) << user.password << endl; //read data from file
                     }
                 }
             }
@@ -233,7 +281,12 @@ void ManageKids::printChild()
 
         while (1)
         {
-            Data >> setw(20) >> user.firstName >> setw(20) >> user.lastName >> setw(4) >> user.age >> setw(15) >> user.username >> setw(15) >> user.password; //read data from file
+            //read data from file
+            Data >> setw(20) >> user.firstName >>
+                setw(20) >> user.lastName >>
+                setw(4) >> user.age >>
+                setw(15) >> user.username >>
+                setw(15) >> user.password; //read data from file
 
             if (Data.eof())
             {
@@ -241,14 +294,63 @@ void ManageKids::printChild()
             }
             else
             {
-                if (user.username != "MA1425")
+                if (user.username != "MA1425") //to not print manager information
                 {
-                    cout << left << setw(20) << user.firstName << setw(20) << user.lastName << setw(4) << user.age << setw(15) << user.username << setw(15) << user.password << endl; //read data from file
+                    cout << left << setw(20) << user.firstName
+                         << setw(20) << user.lastName
+                         << setw(4) << user.age
+                         << setw(15) << user.username
+                         << setw(15) << user.password << endl; //read data from file
                 }
             }
         }
     }
     Data.close();
+}
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+bool ManageKids::ValidationName(string name)
+{
+    for (size_t i = 0; i < name.length(); i++) //Check the name because the name must be just a letter
+    {
+        if (!isalpha(name[i]))
+        {
+            return false;
+        }
+    }
+    return true;
+}
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+bool ManageKids::ValidationAge(int age)
+{
+    if (age < 7 && age > 3) //Check the age must be less than 7 and more than 3
+    {
+        return true;
+    }
+    return false;
+}
+
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+bool ManageKids::ValidationPassword(string password)
+{
+    if (password.length() > 3 && password.length() < 11)
+    {
+        return true;
+    }
+    return false;
+}
+
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+bool ManageKids::ValidationUsername(string username)
+{
+    if (username[0] == 'C' && username[1] == 'H' && username.length() == 6)
+    {
+        return true;
+    }
+    return false;
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------

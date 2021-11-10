@@ -24,9 +24,9 @@ int main()
         cout << "manager" << endl;
         Manager Ma(login.getFirstName(), login.getLastName());
         ManageKids s;
-        // s.addChild();
-        // s.deleteChild("CH2614");
-        s.editChild("CH4623");
+        s.addChild();
+        //  s.deleteChild("CH4623");
+        // s.editChild("CH4623");
         cout << "\n ------------------------------------------------------\n";
         s.printChild();
         break;

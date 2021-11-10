@@ -21,29 +21,22 @@ state Login::searchUser(string username, string password)
     ifstream Data("./userData.txt", ios::in); //open file
     if (Data.is_open())
     {
-        //----------debug------//
-        // cout << "file is open" << endl;
         while (1)
         {
-            Data >> setw(20) >> user.firstName >> setw(20) >> user.lastName >> setw(4) >> user.age >> setw(15) >> user.username >> setw(15) >> user.password; //read data from file
-            //----------debug------//
-            // cout << left << setw(20) << user.firstName << setw(20) << user.lastName << setw(4) << user.age << setw(15) << user.username << setw(15) << user.password << endl;
+            //read data from file
+            Data >> setw(20) >> user.firstName >>
+                setw(20) >> user.lastName >>
+                setw(4) >> user.age >>
+                setw(15) >> user.username >>
+                setw(15) >> user.password;
             if (Data.eof())
             {
-                //----------debug------//
-                // cout << "end of file" << endl;
                 break;
             }
             else
             {
-                //----------debug------//
-                // cout << "in else" << endl;
-                // cout << user.username << endl;
-                if (user.username == username && user.password == password)
+                if (user.username == username && user.password == password) //check the password and username
                 {
-                    //----------debug------//
-                    // cout << "founded!!!!" << endl;
-                    // cout << user.username << endl;
                     if (user.username[0] == 'M' && user.username[1] == 'A') //Check the first two letters of the username
                     {
                         return MANAGER;
@@ -54,7 +47,6 @@ state Login::searchUser(string username, string password)
                     }
                 }
             }
-            // Data.clear();
         }
         return UNDEFINED_USER;
     }
