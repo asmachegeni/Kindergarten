@@ -7,11 +7,13 @@ class ManageKids
 {
 public:
     void addChild();
-    void deletChil(std::string);
+    void deletChild(std::string);
     void editChild(std::string);
     void printChild();
+    bool searchUser(std::string);
 
 private:
     info user;
+    info temp;
 };
 #endif //MANAGEKIDS_HPP

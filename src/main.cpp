@@ -24,11 +24,11 @@ int main()
         cout << "manager" << endl;
         Manager Ma(login.getFirstName(), login.getLastName());
         ManageKids s;
-        s.addChild();
-        // s.deletChil("CH2614");
+        // s.addChild();
+        s.deletChild("CH2614");
         // s.editChild("CH4623");
-        // s.printChild();
-        cout << login.getFirstName() << endl;
+        cout << "\n ------------------------------------------------------\n";
+        s.printChild();
         break;
     }
     case CHILD:
