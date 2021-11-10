@@ -26,6 +26,7 @@ public:
     state searchUser(std::string, std::string);
     std::string getFirstName() const;
     std::string getLastName() const;
+    int getAge() const;
 
 private:
     info user;
