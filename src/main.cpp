@@ -20,13 +20,23 @@ int main()
     switch (login.searchUser(username, password))
     {
     case MANAGER:
+    {
         cout << "manager" << endl;
+        Manager Ma(login.getFirstName(), login.getLastName());
+        ManageKids s;
+        s.addChild();
+        // s.deletChil("CH2614");
+        // s.editChild("CH4623");
+        // s.printChild();
         cout << login.getFirstName() << endl;
         break;
+    }
     case CHILD:
-    Child ch()
+    {
+        Child ch(login.getFirstName(), login.getAge());
         cout << "child" << endl;
         break;
+    }
     case UNDEFINED_USER:
         cout << "UNDEFINED_USER" << endl;
         break;
