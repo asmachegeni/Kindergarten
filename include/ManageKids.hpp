@@ -12,6 +12,6 @@ public:
     void printChild();
 
 private:
-    info information;
+    info user;
 };
 #endif //MANAGEKIDS_HPP

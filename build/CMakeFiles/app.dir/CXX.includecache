@@ -55,6 +55,10 @@ iostream
 -
 string
 -
+fstream
+-
+iomanip
+-
 ManageKids.hpp
 /mnt/d/kindergarten/src/ManageKids.hpp
 Child.hpp

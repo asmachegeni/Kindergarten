@@ -6,7 +6,7 @@
 #include "Login.hpp"
 #include "Manager.hpp"
 #include "Child.hpp"
-#include"ManageKids.hpp"
+#include "ManageKids.hpp"
 using namespace std;
 int main()
 {
@@ -24,6 +24,7 @@ int main()
         cout << login.getFirstName() << endl;
         break;
     case CHILD:
+    Child ch()
         cout << "child" << endl;
         break;
     case UNDEFINED_USER:
