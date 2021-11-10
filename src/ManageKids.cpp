@@ -14,6 +14,7 @@ bool ManageKids::searchUser(string username)
     ifstream Data("./userData.txt", ios::in); //open file
     if (Data.is_open())
     {
+        Data.clear();
         while (1)
         {
             Data >> setw(20) >> user.firstName >> setw(20) >> user.lastName >> setw(4) >> user.age >> setw(15) >> user.username >> setw(15) >> user.password; //read data from file
@@ -27,6 +28,7 @@ bool ManageKids::searchUser(string username)
                 {
                     if (user.username[0] == 'C' && user.username[1] == 'H')
                     {
+                        cout << "user founded" << endl;
                         Data.close();
                         return true;
                     }
@@ -79,13 +81,15 @@ void ManageKids::addChild()
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void ManageKids::deletChild(string username)
+void ManageKids::deleteChild(string username)
 {
-    if (searchUser(user.username))
+    if (searchUser(username))
     {
+
         ifstream Data("./userData.txt", ios::in); //open file
         if (Data.is_open())
         {
+            Data.clear();
             ofstream Datacopy("./userDatacopy.txt", ios::out); //open file
             if (!Datacopy.is_open())
             {
@@ -123,11 +127,12 @@ void ManageKids::deletChild(string username)
 //---------------------------------------------------------------------
 void ManageKids::editChild(string username)
 {
-    if (searchUser(user.username))
+    if (searchUser(username))
     {
         fstream Data("./userData.txt", ios::in | ios::out); //open file
         if (Data.is_open())
         {
+            Data.clear();
             ofstream Datacopy("./userDatacopy.txt", ios::out); //open file
             if (!Datacopy.is_open())
             {
@@ -150,13 +155,14 @@ void ManageKids::editChild(string username)
                         cout << "3:Firstname" << endl;
                         cout << "4:Lastname" << endl;
                         cout << "5:Age" << endl;
-                        char Selection;
+                        int Selection;
                         cin >> Selection;
                         string change;
                         int age;
                         switch (Selection)
                         {
                         case 1:
+                        {
                             cin >> change;
                             if (change[0] == 'C' && change[1] == 'H' && change.length() == 5)
                             {
@@ -167,25 +173,36 @@ void ManageKids::editChild(string username)
                                 cout << "user deleted" << endl;
                             }
                             break;
+                        }
                         case 2:
+                        {
                             cin >> change;
                             user.password = change;
                             break;
+                        }
                         case 3:
+                        {
                             cin >> change;
                             user.firstName = change;
                             break;
+                        }
                         case 4:
+                        {
                             cin >> change;
                             user.lastName = change;
                             break;
+                        }
                         case 5:
+                        {
                             cin >> age;
                             user.age = age;
                             break;
+                        }
                         default:
+                        {
                             cout << "command not found!!!!!" << endl;
                             break;
+                        }
                         }
                         Datacopy << left << setw(20) << user.firstName << setw(20) << user.lastName << setw(4) << user.age << setw(15) << user.username << setw(15) << user.password << endl; //read data from file
                     }

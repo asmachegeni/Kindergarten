@@ -7,7 +7,7 @@ class ManageKids
 {
 public:
     void addChild();
-    void deletChild(std::string);
+    void deleteChild(std::string);
     void editChild(std::string);
     void printChild();
     bool searchUser(std::string);

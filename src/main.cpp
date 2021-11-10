@@ -12,12 +12,12 @@ int main()
 {
 
     Login login;
-    string username;
-    cin >> username;
-    string password;
-    cin >> password;
+    // string username;
+    // cin >> username;
+    // string password;
+    // cin >> password;
 
-    switch (login.searchUser(username, password))
+    switch (login.searchUser("MA1425", "Admin"))
     {
     case MANAGER:
     {
@@ -25,8 +25,8 @@ int main()
         Manager Ma(login.getFirstName(), login.getLastName());
         ManageKids s;
         // s.addChild();
-        s.deletChild("CH2614");
-        // s.editChild("CH4623");
+        // s.deleteChild("CH2614");
+        s.editChild("CH4623");
         cout << "\n ------------------------------------------------------\n";
         s.printChild();
         break;
