@@ -15,23 +15,23 @@ int main()
 {
 
     Login login;
-    // string username;
+    string username;
     // cin >> username;
-    // string password;
+    string password;
     // cin >> password;
 
     switch (login.searchUser("MA1425", "Admin"))
     {
     case MANAGER:
     {
-        cout << "manager" << endl;
-        Manager Ma(login.getFirstName(), login.getLastName());
-        ManageKids s;
-        // s.addChild();
-        //  s.deleteChild("CH4623");
-        // s.editChild("CH4623");
-        cout << "\n ------------------------------------------------------\n";
-        s.printChild();
+        // cout << "manager" << endl;
+        Manager Ma(password, username);
+        // ManageKids s;
+        // // s.addChild();
+        // //  s.deleteChild("CH4623");
+        // // s.editChild("CH4623");
+        // cout << "\n ------------------------------------------------------\n";
+        // s.printChild();
         break;
     }
     case CHILD:

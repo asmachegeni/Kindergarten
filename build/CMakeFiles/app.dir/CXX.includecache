@@ -9,6 +9,8 @@
 ../include/Child.hpp
 string
 -
+Person.hpp
+../include/Person.hpp
 
 ../include/Homework.hpp
 
@@ -27,12 +29,20 @@ Login.hpp
 ../include/Manager.hpp
 string
 -
-
+Person.hpp
 ../include/Person.hpp
 
+../include/Person.hpp
+string
+-
+
 ../include/Teacher.hpp
+Person.hpp
+../include/Person.hpp
 
 ../include/person.hpp
+string
+-
 
 /mnt/d/kindergarten/src/Child.cpp
 iostream

@@ -1,6 +1,7 @@
 #ifndef TEACHER_HPP
 #define TEACHER_HPP
-class Teacher
+#include "Person.hpp"
+class Teacher : public Person
 {
 public:
 private:

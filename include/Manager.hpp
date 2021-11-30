@@ -1,18 +1,11 @@
 #ifndef MANAGER_HPP
 #define MANAGER_HPP
 #include <string>
-class Manager
+#include "Person.hpp"
+class Manager : public Person
 {
 public:
-    Manager(std::string, std::string);
-    void setFirstName(std::string);
-    void setLastName(std::string);
-    std::string getFirstName() const;
-    std::string getLastName() const;
-
+ Manager(std::string, std::string);
 private:
-    std::string FirstName;
-    std::string LastName;
 };
 #endif //MANAGER_HPP
-

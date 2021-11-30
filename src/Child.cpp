@@ -13,27 +13,6 @@ Child::Child(string FirstName, int age)
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void Child::setFirstName(string FirstName)
-{
-    int flag = 1;
-    for (size_t i = 0; i < FirstName.length(); i++) //Check the name because the name must be just a letter
-    {
-        if (isalpha(FirstName[i]))
-        {
-            flag = 0;
-        }
-    }
-    if (!flag)
-    {
-        this->FirstName = FirstName;
-    }
-    else
-    {
-        cout << "name is not valid" << endl;
-    }
-}
-//---------------------------------------------------------------------
-//---------------------------------------------------------------------
 void Child::setAge(int age)
 {
     if (age < 7 && age > 3) //Check the age must be less than 7 and more than 3
@@ -44,12 +23,6 @@ void Child::setAge(int age)
     {
         cout << "Age not valid" << endl;
     }
-}
-//---------------------------------------------------------------------
-//---------------------------------------------------------------------
-string Child::getFirstName() const
-{
-    return this->FirstName;
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
