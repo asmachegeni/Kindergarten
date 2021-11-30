@@ -15,3 +15,4 @@ private:
     std::string LastName;
 };
 #endif //MANAGER_HPP
+

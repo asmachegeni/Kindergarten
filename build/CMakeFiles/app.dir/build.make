@@ -177,13 +177,88 @@ CMakeFiles/app.dir/src/ManageKids.cpp.o.provides: CMakeFiles/app.dir/src/ManageK
 CMakeFiles/app.dir/src/ManageKids.cpp.o.provides.build: CMakeFiles/app.dir/src/ManageKids.cpp.o
 
 
+CMakeFiles/app.dir/src/Person.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/Person.cpp.o: ../src/Person.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/kindergarten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/app.dir/src/Person.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/Person.cpp.o -c /mnt/d/kindergarten/src/Person.cpp
+
+CMakeFiles/app.dir/src/Person.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/Person.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/kindergarten/src/Person.cpp > CMakeFiles/app.dir/src/Person.cpp.i
+
+CMakeFiles/app.dir/src/Person.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/Person.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/kindergarten/src/Person.cpp -o CMakeFiles/app.dir/src/Person.cpp.s
+
+CMakeFiles/app.dir/src/Person.cpp.o.requires:
+
+.PHONY : CMakeFiles/app.dir/src/Person.cpp.o.requires
+
+CMakeFiles/app.dir/src/Person.cpp.o.provides: CMakeFiles/app.dir/src/Person.cpp.o.requires
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Person.cpp.o.provides.build
+.PHONY : CMakeFiles/app.dir/src/Person.cpp.o.provides
+
+CMakeFiles/app.dir/src/Person.cpp.o.provides.build: CMakeFiles/app.dir/src/Person.cpp.o
+
+
+CMakeFiles/app.dir/src/Teacher.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/Teacher.cpp.o: ../src/Teacher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/kindergarten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/app.dir/src/Teacher.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/Teacher.cpp.o -c /mnt/d/kindergarten/src/Teacher.cpp
+
+CMakeFiles/app.dir/src/Teacher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/Teacher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/kindergarten/src/Teacher.cpp > CMakeFiles/app.dir/src/Teacher.cpp.i
+
+CMakeFiles/app.dir/src/Teacher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/Teacher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/kindergarten/src/Teacher.cpp -o CMakeFiles/app.dir/src/Teacher.cpp.s
+
+CMakeFiles/app.dir/src/Teacher.cpp.o.requires:
+
+.PHONY : CMakeFiles/app.dir/src/Teacher.cpp.o.requires
+
+CMakeFiles/app.dir/src/Teacher.cpp.o.provides: CMakeFiles/app.dir/src/Teacher.cpp.o.requires
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Teacher.cpp.o.provides.build
+.PHONY : CMakeFiles/app.dir/src/Teacher.cpp.o.provides
+
+CMakeFiles/app.dir/src/Teacher.cpp.o.provides.build: CMakeFiles/app.dir/src/Teacher.cpp.o
+
+
+CMakeFiles/app.dir/src/Homework.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/Homework.cpp.o: ../src/Homework.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/kindergarten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/app.dir/src/Homework.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/Homework.cpp.o -c /mnt/d/kindergarten/src/Homework.cpp
+
+CMakeFiles/app.dir/src/Homework.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/Homework.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/kindergarten/src/Homework.cpp > CMakeFiles/app.dir/src/Homework.cpp.i
+
+CMakeFiles/app.dir/src/Homework.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/Homework.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/kindergarten/src/Homework.cpp -o CMakeFiles/app.dir/src/Homework.cpp.s
+
+CMakeFiles/app.dir/src/Homework.cpp.o.requires:
+
+.PHONY : CMakeFiles/app.dir/src/Homework.cpp.o.requires
+
+CMakeFiles/app.dir/src/Homework.cpp.o.provides: CMakeFiles/app.dir/src/Homework.cpp.o.requires
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Homework.cpp.o.provides.build
+.PHONY : CMakeFiles/app.dir/src/Homework.cpp.o.provides
+
+CMakeFiles/app.dir/src/Homework.cpp.o.provides.build: CMakeFiles/app.dir/src/Homework.cpp.o
+
+
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/src/main.cpp.o" \
 "CMakeFiles/app.dir/src/Login.cpp.o" \
 "CMakeFiles/app.dir/src/Manager.cpp.o" \
 "CMakeFiles/app.dir/src/Child.cpp.o" \
-"CMakeFiles/app.dir/src/ManageKids.cpp.o"
+"CMakeFiles/app.dir/src/ManageKids.cpp.o" \
+"CMakeFiles/app.dir/src/Person.cpp.o" \
+"CMakeFiles/app.dir/src/Teacher.cpp.o" \
+"CMakeFiles/app.dir/src/Homework.cpp.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
@@ -193,9 +268,12 @@ app: CMakeFiles/app.dir/src/Login.cpp.o
 app: CMakeFiles/app.dir/src/Manager.cpp.o
 app: CMakeFiles/app.dir/src/Child.cpp.o
 app: CMakeFiles/app.dir/src/ManageKids.cpp.o
+app: CMakeFiles/app.dir/src/Person.cpp.o
+app: CMakeFiles/app.dir/src/Teacher.cpp.o
+app: CMakeFiles/app.dir/src/Homework.cpp.o
 app: CMakeFiles/app.dir/build.make
 app: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/kindergarten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/kindergarten/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -208,6 +286,9 @@ CMakeFiles/app.dir/requires: CMakeFiles/app.dir/src/Login.cpp.o.requires
 CMakeFiles/app.dir/requires: CMakeFiles/app.dir/src/Manager.cpp.o.requires
 CMakeFiles/app.dir/requires: CMakeFiles/app.dir/src/Child.cpp.o.requires
 CMakeFiles/app.dir/requires: CMakeFiles/app.dir/src/ManageKids.cpp.o.requires
+CMakeFiles/app.dir/requires: CMakeFiles/app.dir/src/Person.cpp.o.requires
+CMakeFiles/app.dir/requires: CMakeFiles/app.dir/src/Teacher.cpp.o.requires
+CMakeFiles/app.dir/requires: CMakeFiles/app.dir/src/Homework.cpp.o.requires
 
 .PHONY : CMakeFiles/app.dir/requires
 

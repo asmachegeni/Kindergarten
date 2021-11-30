@@ -10,6 +10,8 @@
 string
 -
 
+../include/Homework.hpp
+
 ../include/Login.hpp
 string
 -
@@ -26,6 +28,12 @@ Login.hpp
 string
 -
 
+../include/Person.hpp
+
+../include/Teacher.hpp
+
+../include/person.hpp
+
 /mnt/d/kindergarten/src/Child.cpp
 iostream
 -
@@ -37,6 +45,12 @@ fstream
 -
 Child.hpp
 /mnt/d/kindergarten/src/Child.hpp
+
+/mnt/d/kindergarten/src/Homework.cpp
+iostream
+-
+Homework.hpp
+/mnt/d/kindergarten/src/Homework.hpp
 
 /mnt/d/kindergarten/src/Login.cpp
 iostream
@@ -78,6 +92,18 @@ fstream
 Manager.hpp
 /mnt/d/kindergarten/src/Manager.hpp
 
+/mnt/d/kindergarten/src/Person.cpp
+iostream
+-
+person.hpp
+/mnt/d/kindergarten/src/person.hpp
+
+/mnt/d/kindergarten/src/Teacher.cpp
+iostream
+-
+Teacher.hpp
+/mnt/d/kindergarten/src/Teacher.hpp
+
 /mnt/d/kindergarten/src/main.cpp
 iostream
 -
@@ -97,4 +123,10 @@ Child.hpp
 /mnt/d/kindergarten/src/Child.hpp
 ManageKids.hpp
 /mnt/d/kindergarten/src/ManageKids.hpp
+Person.hpp
+/mnt/d/kindergarten/src/Person.hpp
+Homework.hpp
+/mnt/d/kindergarten/src/Homework.hpp
+Teacher.hpp
+/mnt/d/kindergarten/src/Teacher.hpp
 

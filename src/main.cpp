@@ -7,6 +7,9 @@
 #include "Manager.hpp"
 #include "Child.hpp"
 #include "ManageKids.hpp"
+#include "Person.hpp"
+#include "Homework.hpp"
+#include "Teacher.hpp"
 using namespace std;
 int main()
 {

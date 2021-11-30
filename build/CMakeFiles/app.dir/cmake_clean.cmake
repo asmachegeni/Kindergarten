@@ -4,6 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/app.dir/src/Manager.cpp.o"
   "CMakeFiles/app.dir/src/Child.cpp.o"
   "CMakeFiles/app.dir/src/ManageKids.cpp.o"
+  "CMakeFiles/app.dir/src/Person.cpp.o"
+  "CMakeFiles/app.dir/src/Teacher.cpp.o"
+  "CMakeFiles/app.dir/src/Homework.cpp.o"
   "app.pdb"
   "app"
 )

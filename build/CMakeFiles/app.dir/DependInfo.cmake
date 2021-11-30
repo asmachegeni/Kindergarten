@@ -5,9 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/d/kindergarten/src/Child.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Child.cpp.o"
+  "/mnt/d/kindergarten/src/Homework.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Homework.cpp.o"
   "/mnt/d/kindergarten/src/Login.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Login.cpp.o"
   "/mnt/d/kindergarten/src/ManageKids.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/ManageKids.cpp.o"
   "/mnt/d/kindergarten/src/Manager.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Manager.cpp.o"
+  "/mnt/d/kindergarten/src/Person.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Person.cpp.o"
+  "/mnt/d/kindergarten/src/Teacher.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Teacher.cpp.o"
   "/mnt/d/kindergarten/src/main.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -150,6 +150,33 @@ src/Child.cpp.s:
 	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Child.cpp.s
 .PHONY : src/Child.cpp.s
 
+src/Homework.o: src/Homework.cpp.o
+
+.PHONY : src/Homework.o
+
+# target to build an object file
+src/Homework.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Homework.cpp.o
+.PHONY : src/Homework.cpp.o
+
+src/Homework.i: src/Homework.cpp.i
+
+.PHONY : src/Homework.i
+
+# target to preprocess a source file
+src/Homework.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Homework.cpp.i
+.PHONY : src/Homework.cpp.i
+
+src/Homework.s: src/Homework.cpp.s
+
+.PHONY : src/Homework.s
+
+# target to generate assembly for a file
+src/Homework.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Homework.cpp.s
+.PHONY : src/Homework.cpp.s
+
 src/Login.o: src/Login.cpp.o
 
 .PHONY : src/Login.o
@@ -231,6 +258,60 @@ src/Manager.cpp.s:
 	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Manager.cpp.s
 .PHONY : src/Manager.cpp.s
 
+src/Person.o: src/Person.cpp.o
+
+.PHONY : src/Person.o
+
+# target to build an object file
+src/Person.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Person.cpp.o
+.PHONY : src/Person.cpp.o
+
+src/Person.i: src/Person.cpp.i
+
+.PHONY : src/Person.i
+
+# target to preprocess a source file
+src/Person.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Person.cpp.i
+.PHONY : src/Person.cpp.i
+
+src/Person.s: src/Person.cpp.s
+
+.PHONY : src/Person.s
+
+# target to generate assembly for a file
+src/Person.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Person.cpp.s
+.PHONY : src/Person.cpp.s
+
+src/Teacher.o: src/Teacher.cpp.o
+
+.PHONY : src/Teacher.o
+
+# target to build an object file
+src/Teacher.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Teacher.cpp.o
+.PHONY : src/Teacher.cpp.o
+
+src/Teacher.i: src/Teacher.cpp.i
+
+.PHONY : src/Teacher.i
+
+# target to preprocess a source file
+src/Teacher.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Teacher.cpp.i
+.PHONY : src/Teacher.cpp.i
+
+src/Teacher.s: src/Teacher.cpp.s
+
+.PHONY : src/Teacher.s
+
+# target to generate assembly for a file
+src/Teacher.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Teacher.cpp.s
+.PHONY : src/Teacher.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -270,6 +351,9 @@ help:
 	@echo "... src/Child.o"
 	@echo "... src/Child.i"
 	@echo "... src/Child.s"
+	@echo "... src/Homework.o"
+	@echo "... src/Homework.i"
+	@echo "... src/Homework.s"
 	@echo "... src/Login.o"
 	@echo "... src/Login.i"
 	@echo "... src/Login.s"
@@ -279,6 +363,12 @@ help:
 	@echo "... src/Manager.o"
 	@echo "... src/Manager.i"
 	@echo "... src/Manager.s"
+	@echo "... src/Person.o"
+	@echo "... src/Person.i"
+	@echo "... src/Person.s"
+	@echo "... src/Teacher.o"
+	@echo "... src/Teacher.i"
+	@echo "... src/Teacher.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
