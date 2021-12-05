@@ -15,6 +15,7 @@ enum state
 {
     MANAGER,
     CHILD,
+    TEACHER,
     UNDEFINED_USER
 
 };

@@ -39,16 +39,20 @@ state Login::searchUser(string username, string password)
                 {
                     if (user.username[0] == 'M' && user.username[1] == 'A') //Check the first two letters of the username
                     {
-                        return MANAGER;
+                        return MANAGER; //user is manager
                     }
                     else if (user.username[0] == 'C' && user.username[1] == 'H')
                     {
-                        return CHILD;
+                        return CHILD; //user is child
+                    }
+                    else if (user.username[0] == 'T' && user.username[1] == 'E')
+                    {
+                        return TEACHER; //user is teacher
                     }
                 }
             }
         }
-        return UNDEFINED_USER;
+        return UNDEFINED_USER; //user undefined user
     }
 }
 //---------------------------------------------------------------------
