@@ -9,6 +9,7 @@ public:
     virtual void setLastName(std::string);
     virtual std::string getFirstName() const;
     virtual std::string getLastName() const;
+    virtual void setHomework();
 private:
     std::string FirstName;
     std::string LastName;

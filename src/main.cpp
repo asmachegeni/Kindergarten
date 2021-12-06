@@ -25,13 +25,14 @@ int main()
     case MANAGER:
     {
         // cout << "manager" << endl;
-        Manager Ma(password, username);
+        Manager Ma(login.getFirstName(), login.getLastName());
+        cout<<Ma.getFirstName();
         // ManageKids s;
-        // // s.addChild();
-        // //  s.deleteChild("CH4623");
-        // // s.editChild("CH4623");
-        // cout << "\n ------------------------------------------------------\n";
-        // s.printChild();
+        // s.addChild();
+        //  s.deleteChild("CH4623");
+        // s.editChild("CH4623");
+        cout << "\n ------------------------------------------------------\n";
+        // s.printPerson();
         break;
     }
     case CHILD:
@@ -39,6 +40,11 @@ int main()
         Child ch(login.getFirstName(), login.getAge());
         cout << "child" << endl;
         break;
+    }
+    case TEACHER:
+    {
+        Teacher teach(password,username);
+        teach.setHomework();
     }
     case UNDEFINED_USER:
         cout << "UNDEFINED_USER" << endl;

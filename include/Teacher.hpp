@@ -6,6 +6,7 @@
 class Teacher : public Person
 {
 public:
+	Teacher(std::string,std::string);
 	void setHomework();
 private:
 	std::vector<Child>child;

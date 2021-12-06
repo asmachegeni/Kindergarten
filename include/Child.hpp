@@ -11,7 +11,6 @@ public:
     void setAge(int);
     int getAge() const;
     void setHomework(int ,int ,int);
-    Homework *getHomework()const;
     void doHomework();
     void setScore(int);
 
