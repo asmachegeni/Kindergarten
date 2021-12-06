@@ -36,6 +36,12 @@ bool ManageKids::searchUser(string username)
                         Data.close();
                         return true;
                     }
+                    else if (user.username[0] == 'T' && user.username[1] == 'E')
+                    {
+                        cout << "user founded" << endl;
+                        Data.close();
+                        return true;
+                    }
                 }
             }
         }
@@ -45,7 +51,7 @@ bool ManageKids::searchUser(string username)
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void ManageKids::addChild()
+void ManageKids::addPerson()
 {
     ofstream Data("./userData.txt", ios::app); //open file
     if (Data.is_open())
@@ -93,7 +99,7 @@ void ManageKids::addChild()
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void ManageKids::deleteChild(string username)
+void ManageKids::deletePerson(string username)
 {
     if (searchUser(username))
     {
@@ -147,7 +153,7 @@ void ManageKids::deleteChild(string username)
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void ManageKids::editChild(string username)
+void ManageKids::editPerson(string username)
 {
     if (searchUser(username))
     {
@@ -273,7 +279,7 @@ void ManageKids::editChild(string username)
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void ManageKids::printChild()
+void ManageKids::printPerson()
 {
     ifstream Data("./userData.txt", ios::in); //open file
     if (Data.is_open())
@@ -347,6 +353,10 @@ bool ManageKids::ValidationPassword(string password)
 bool ManageKids::ValidationUsername(string username)
 {
     if (username[0] == 'C' && username[1] == 'H' && username.length() == 6)
+    {
+        return true;
+    }
+    else if (username[0] == 'T' && username[1] == 'E' && username.length() == 6)
     {
         return true;
     }

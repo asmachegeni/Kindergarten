@@ -6,10 +6,10 @@
 class ManageKids
 {
 public:
-    void addChild();
-    void deleteChild(std::string);
-    void editChild(std::string);
-    void printChild();
+    void addPerson();
+    void deletePerson(std::string);
+    void editPerson(std::string);
+    void printPerson();
     bool searchUser(std::string);
     bool ValidationName(std::string);
     bool ValidationAge(int);
