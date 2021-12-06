@@ -48,6 +48,7 @@ bool ManageKids::searchUser(string username)
         Data.close();
         return false;
     }
+    return false;//for warning
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------

@@ -6,11 +6,29 @@
 
 #IncludeRegexTransform: 
 
+../include/Child.hpp
+string
+-
+Person.hpp
+../include/Person.hpp
+Homework.hpp
 ../include/Homework.hpp
 
-/mnt/d/kindergarten/src/Homework.cpp
+../include/Homework.hpp
+
+../include/Person.hpp
+string
+-
+
+/mnt/d/kindergarten/src/Child.cpp
 iostream
 -
-Homework.hpp
-/mnt/d/kindergarten/src/Homework.hpp
+string
+-
+iomanip
+-
+fstream
+-
+Child.hpp
+/mnt/d/kindergarten/src/Child.hpp
 
