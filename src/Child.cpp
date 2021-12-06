@@ -32,9 +32,9 @@ int Child::getAge() const
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void Child::setHomework(int num1 ,int num2  ,int result)
+void Child::setHomework(int num1 ,int num2  ,int answer)
 {
-    homework =new Homework(num1 ,num2,result);
+    homework =new Homework(num1 ,num2,answer);
 
 }
 //---------------------------------------------------------------------
@@ -45,6 +45,15 @@ void Child::doHomework()
     int result;
     cin>>result;
     homework->setResult(result);
+}
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+void Child::setScore(int result)
+{
+    if(result==homework->getAnswer())
+    {
+        score+=20;
+    }
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------

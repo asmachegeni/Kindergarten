@@ -11,10 +11,14 @@ public:
     void setAge(int);
     int getAge() const;
     void setHomework(int ,int ,int);
+    Homework *getHomework()const;
     void doHomework();
+    void setScore(int);
+
 
 private:
     int age;
     Homework * homework;
+    int score=0;
 };
 #endif //MANAGER_HPP

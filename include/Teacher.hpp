@@ -9,6 +9,5 @@ public:
 	void setHomework();
 private:
 	std::vector<Child>child;
-	
 };
 #endif //TEACHER_HPP
