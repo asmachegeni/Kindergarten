@@ -1,17 +1,21 @@
 #include<iostream>
 #include "MatchGame.hpp"
+#include "Square.hpp"
 using namespace std;
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 void MatchGame::setSquares()
 {
     int count=0;
-    for (int i = 0; i <3 ; ++i) {
+    pair <Square,int>s();
+   vector< pair <Square,int>> row;
+    for (int i = 0; i <4 ; ++i) {
         for (int j = 0; j < 3; ++j) {
             count++;
-            squares[i][j].first.setUrl("Square");
-            squares[i][j].second=count;
+            row[j].first.setUrl("Square");
+            row[j].second=count;
         }
+        squares.push_back(row);
     }
 }
 //-----------------------------------------------------------------
@@ -50,7 +54,7 @@ int MatchGame::getScore()const
 std::pair <Square,int> MatchGame::searchSquare(int numberHouse)
 {
     if(numberHouse<10) {
-        for (int i = 0; i < 3; ++i) {
+        for (int i = 0; i < 4; ++i) {
             for (int j = 0; j < 3; ++j) {
 
                 if (squares[i][j].second == numberHouse) {
@@ -61,7 +65,7 @@ std::pair <Square,int> MatchGame::searchSquare(int numberHouse)
     }
     else
     {
-        throw out_of_range("The number of houses is 9");
+        throw out_of_range("The number of houses is 12");
     }
     return squares[0][0];//for warning
 }

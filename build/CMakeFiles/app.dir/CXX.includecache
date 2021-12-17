@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/Child.hpp
-string
--
-Person.hpp
-../include/Person.hpp
-Homework.hpp
-../include/Homework.hpp
-MatchGame.hpp
-../include/MatchGame.hpp
-
-../include/Homework.hpp
-
 ../include/MatchGame.hpp
 iostream
 -
@@ -30,27 +18,17 @@ string
 Square.hpp
 ../include/Square.hpp
 
-../include/Person.hpp
-string
--
-
 ../include/Square.hpp
 iostream
 -
 string
 -
 
-/mnt/d/kindergarten/src/Child.cpp
+/mnt/d/kindergarten/src/MatchGame.cpp
 iostream
 -
-string
--
-iomanip
--
-fstream
--
-stdexcept
--
-Child.hpp
-/mnt/d/kindergarten/src/Child.hpp
+MatchGame.hpp
+/mnt/d/kindergarten/src/MatchGame.hpp
+Square.hpp
+/mnt/d/kindergarten/src/Square.hpp
 
