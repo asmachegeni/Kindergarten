@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Homework.hpp"
+#include<stdexcept>
 using namespace std;
 //-------------------------------------------------------------
 //-------------------------------------------------------------
@@ -17,6 +18,10 @@ void Homework::setNums(int num1,int num2)
 		this->num1=num1;
 		this->num2=num2;
 	}
+    else
+    {
+        throw  out_of_range("Numbers must be less than 20");
+    }
 }
 //-------------------------------------------------------------
 //-------------------------------------------------------------
@@ -44,6 +49,10 @@ int Homework::getNum2()const
 	{
 		this->answer=answer;
 	}
+    else
+    {
+        throw invalid_argument("You did not enter the sum of the numbers correctly");
+    }
 }
 //-------------------------------------------------------------
 //-------------------------------------------------------------

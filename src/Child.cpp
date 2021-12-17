@@ -2,6 +2,7 @@
 #include <string>
 #include <iomanip>
 #include <fstream>
+#include<stdexcept>
 #include "Child.hpp"
 using namespace std;
 //---------------------------------------------------------------------
@@ -21,7 +22,7 @@ void Child::setAge(int age)
     }
     else
     {
-        cout << "Age not valid" << endl;
+        throw out_of_range("Age is not Valid!");
     }
 }
 //---------------------------------------------------------------------
@@ -53,6 +54,9 @@ void Child::setScore(int result)
     if(result==homework->getAnswer())
     {
         score+=20;
+    } else
+    {
+        throw invalid_argument("The answer is not correct");
     }
 }
 //---------------------------------------------------------------------

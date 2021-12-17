@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <fstream>
 #include "Login.hpp"
+#include<stdexcept>
 using namespace std;
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
@@ -54,6 +55,11 @@ state Login::searchUser(string username, string password)
         }
         return UNDEFINED_USER; //user undefined user
     }
+    else
+    {
+        cerr<<"Can not open the file"<<endl;
+    }
+    return UNDEFINED_USER;//for warning 
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
