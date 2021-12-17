@@ -6,15 +6,27 @@
 
 #IncludeRegexTransform: 
 
+../include/MatchGame.hpp
+iostream
+-
+vector
+-
+utility
+-
+string
+-
+Square.hpp
+../include/Square.hpp
+
 ../include/Square.hpp
 iostream
 -
 string
 -
 
-/mnt/d/kindergarten/src/Square.cpp
-Square.hpp
-/mnt/d/kindergarten/src/Square.hpp
+/mnt/d/kindergarten/src/MatchGame.cpp
 iostream
 -
+MatchGame.hpp
+/mnt/d/kindergarten/src/MatchGame.hpp
 

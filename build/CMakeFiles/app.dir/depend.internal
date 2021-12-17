@@ -24,6 +24,8 @@ CMakeFiles/app.dir/src/Manager.cpp.o
  ../include/Person.hpp
  /mnt/d/kindergarten/src/Manager.cpp
 CMakeFiles/app.dir/src/MatchGame.cpp.o
+ ../include/MatchGame.hpp
+ ../include/Square.hpp
  /mnt/d/kindergarten/src/MatchGame.cpp
 CMakeFiles/app.dir/src/Person.cpp.o
  ../include/person.hpp

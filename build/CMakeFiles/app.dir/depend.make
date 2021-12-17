@@ -23,6 +23,8 @@ CMakeFiles/app.dir/src/Manager.cpp.o: ../include/Manager.hpp
 CMakeFiles/app.dir/src/Manager.cpp.o: ../include/Person.hpp
 CMakeFiles/app.dir/src/Manager.cpp.o: ../src/Manager.cpp
 
+CMakeFiles/app.dir/src/MatchGame.cpp.o: ../include/MatchGame.hpp
+CMakeFiles/app.dir/src/MatchGame.cpp.o: ../include/Square.hpp
 CMakeFiles/app.dir/src/MatchGame.cpp.o: ../src/MatchGame.cpp
 
 CMakeFiles/app.dir/src/Person.cpp.o: ../include/person.hpp
