@@ -59,7 +59,7 @@ state Login::searchUser(string username, string password)
     {
         cerr<<"Can not open the file"<<endl;
     }
-    return UNDEFINED_USER;//for warning 
+    return UNDEFINED_USER;//for warning
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------

@@ -10,6 +10,7 @@
 #include "Person.hpp"
 #include "Homework.hpp"
 #include "Teacher.hpp"
+#include <stdexcept>
 using namespace std;
 int main()
 {

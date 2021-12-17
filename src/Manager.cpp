@@ -2,6 +2,7 @@
 #include <string>
 #include <iomanip>
 #include <fstream>
+#include <stdexcept>
 #include "Manager.hpp"
 using namespace std;
 //---------------------------------------------------------------------

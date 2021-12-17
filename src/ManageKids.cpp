@@ -5,6 +5,7 @@
 #include "ManageKids.hpp"
 #include "Child.hpp"
 #include "Login.hpp"
+#include <stdexcept>
 using namespace std;
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
@@ -47,6 +48,10 @@ bool ManageKids::searchUser(string username)
         }
         Data.close();
         return false;
+    }
+    else
+    {
+        cerr<<"Can not open the file!"<<endl;
     }
     return false;//for warning
 }
@@ -94,6 +99,10 @@ void ManageKids::addPerson()
         {
             cout << "Username is not valid" << endl;
         }
+    }
+    else
+    {
+        cerr<<"Can not open the file!"<<endl;
     }
     cout << "user added" << endl;
     Data.close();
@@ -149,7 +158,7 @@ void ManageKids::deletePerson(string username)
     }
     else
     {
-        cout << "user is not exist" << endl;
+        throw invalid_argument("User is not exist");
     }
 }
 //---------------------------------------------------------------------
@@ -275,7 +284,7 @@ void ManageKids::editPerson(string username)
     }
     else
     {
-        cout << "user is not exist" << endl;
+        throw invalid_argument("User is not exist");
     }
 }
 //---------------------------------------------------------------------
@@ -311,6 +320,10 @@ void ManageKids::printPerson()
                 }
             }
         }
+    }
+    else
+    {
+        cerr<<"Can not open the file!"<<endl;
     }
     Data.close();
 }

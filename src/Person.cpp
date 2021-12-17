@@ -1,5 +1,6 @@
 #include <iostream>
 #include "person.hpp"
+#include <stdexcept>
 using namespace std;
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
@@ -24,7 +25,7 @@ void Person::setFirstName(string FirstName)
     }
     else
     {
-        cout << "name is not valid" << endl;
+        throw invalid_argument( "name is not valid");
     }
 }
 //---------------------------------------------------------------------
@@ -45,7 +46,7 @@ void Person::setLastName(string LastName)
     }
     else
     {
-        cout << "name is not valid" << endl;
+        throw invalid_argument( "name is not valid");
     }
 }
 //---------------------------------------------------------------------
