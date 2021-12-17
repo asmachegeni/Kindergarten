@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/d/kindergarten/src/Login.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Login.cpp.o"
   "/mnt/d/kindergarten/src/ManageKids.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/ManageKids.cpp.o"
   "/mnt/d/kindergarten/src/Manager.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Manager.cpp.o"
+  "/mnt/d/kindergarten/src/MatchGame.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/MatchGame.cpp.o"
   "/mnt/d/kindergarten/src/Person.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Person.cpp.o"
+  "/mnt/d/kindergarten/src/Square.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Square.cpp.o"
   "/mnt/d/kindergarten/src/Teacher.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/Teacher.cpp.o"
   "/mnt/d/kindergarten/src/main.cpp" "/mnt/d/kindergarten/build/CMakeFiles/app.dir/src/main.cpp.o"
   )

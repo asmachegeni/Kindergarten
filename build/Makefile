@@ -258,6 +258,33 @@ src/Manager.cpp.s:
 	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Manager.cpp.s
 .PHONY : src/Manager.cpp.s
 
+src/MatchGame.o: src/MatchGame.cpp.o
+
+.PHONY : src/MatchGame.o
+
+# target to build an object file
+src/MatchGame.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/MatchGame.cpp.o
+.PHONY : src/MatchGame.cpp.o
+
+src/MatchGame.i: src/MatchGame.cpp.i
+
+.PHONY : src/MatchGame.i
+
+# target to preprocess a source file
+src/MatchGame.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/MatchGame.cpp.i
+.PHONY : src/MatchGame.cpp.i
+
+src/MatchGame.s: src/MatchGame.cpp.s
+
+.PHONY : src/MatchGame.s
+
+# target to generate assembly for a file
+src/MatchGame.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/MatchGame.cpp.s
+.PHONY : src/MatchGame.cpp.s
+
 src/Person.o: src/Person.cpp.o
 
 .PHONY : src/Person.o
@@ -284,6 +311,33 @@ src/Person.s: src/Person.cpp.s
 src/Person.cpp.s:
 	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Person.cpp.s
 .PHONY : src/Person.cpp.s
+
+src/Square.o: src/Square.cpp.o
+
+.PHONY : src/Square.o
+
+# target to build an object file
+src/Square.cpp.o:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Square.cpp.o
+.PHONY : src/Square.cpp.o
+
+src/Square.i: src/Square.cpp.i
+
+.PHONY : src/Square.i
+
+# target to preprocess a source file
+src/Square.cpp.i:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Square.cpp.i
+.PHONY : src/Square.cpp.i
+
+src/Square.s: src/Square.cpp.s
+
+.PHONY : src/Square.s
+
+# target to generate assembly for a file
+src/Square.cpp.s:
+	$(MAKE) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/Square.cpp.s
+.PHONY : src/Square.cpp.s
 
 src/Teacher.o: src/Teacher.cpp.o
 
@@ -363,9 +417,15 @@ help:
 	@echo "... src/Manager.o"
 	@echo "... src/Manager.i"
 	@echo "... src/Manager.s"
+	@echo "... src/MatchGame.o"
+	@echo "... src/MatchGame.i"
+	@echo "... src/MatchGame.s"
 	@echo "... src/Person.o"
 	@echo "... src/Person.i"
 	@echo "... src/Person.s"
+	@echo "... src/Square.o"
+	@echo "... src/Square.i"
+	@echo "... src/Square.s"
 	@echo "... src/Teacher.o"
 	@echo "... src/Teacher.i"
 	@echo "... src/Teacher.s"

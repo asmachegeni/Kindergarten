@@ -10,6 +10,8 @@
 #include "Person.hpp"
 #include "Homework.hpp"
 #include "Teacher.hpp"
+#include "MatchGame.hpp"
+#include "Square.hpp"
 #include <stdexcept>
 using namespace std;
 int main()
