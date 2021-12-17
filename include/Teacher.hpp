@@ -8,7 +8,7 @@ class Teacher : public Person
 public:
 	Teacher(std::string,std::string);
 	void setHomework();
+    void writeToFile(int,int,int);
 private:
-	std::vector<Child>child;
 };
 #endif //TEACHER_HPP

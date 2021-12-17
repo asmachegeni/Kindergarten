@@ -46,9 +46,19 @@ Person.hpp
 Child.hpp
 ../include/Child.hpp
 
-../include/person.hpp
+/mnt/d/kindergarten/src/Child.cpp
+iostream
+-
 string
 -
+iomanip
+-
+fstream
+-
+stdexcept
+-
+Child.hpp
+/mnt/d/kindergarten/src/Child.hpp
 
 /mnt/d/kindergarten/src/ManageKids.cpp
 iostream
@@ -68,26 +78,16 @@ Login.hpp
 stdexcept
 -
 
-/mnt/d/kindergarten/src/Manager.cpp
+/mnt/d/kindergarten/src/Teacher.cpp
 iostream
 -
+Teacher.hpp
+/mnt/d/kindergarten/src/Teacher.hpp
 string
--
-iomanip
 -
 fstream
 -
-stdexcept
--
-Manager.hpp
-/mnt/d/kindergarten/src/Manager.hpp
-
-/mnt/d/kindergarten/src/Person.cpp
-iostream
--
-person.hpp
-/mnt/d/kindergarten/src/person.hpp
-stdexcept
+iomanip
 -
 
 /mnt/d/kindergarten/src/main.cpp

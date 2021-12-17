@@ -5,6 +5,22 @@
 #include<stdexcept>
 #include "Child.hpp"
 using namespace std;
+void Child::readFromFile()
+{
+    ifstream Home("./Homework.txt", ios::in); //open file
+    if (Home.is_open()) {
+        int num1,num2,answer;
+        Home.clear();
+        //write new data in file
+        Home >>setw(3) >> num1 >> setw(3) >>num2 >> setw(3) >> answer ;
+        setHomework(num1,num2,answer);
+        Home.close();
+    }
+    else
+    {
+        cerr << "Can not open the file!" << endl;
+    }
+}
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 Child::Child(string FirstName, int age)
