@@ -77,3 +77,14 @@ void Child::setScore(int result)
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
+void Child::playing()
+{
+    int num1,num2;
+    cin>>num1>>num2;
+    for (int i = 0; i < 6; ++i)
+    {
+        cin>>num1>>num2;
+        matchGame->checkUrl(num1,num2);
+    }
+}
+

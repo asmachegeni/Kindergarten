@@ -3,6 +3,7 @@
 #include <string>
 #include "Person.hpp"
 #include"Homework.hpp"
+#include "MatchGame.hpp"
 class Child : public Person
 {
 public:
@@ -13,9 +14,11 @@ public:
     void doHomework();
     void setScore(int);
     void readFromFile();
+    void playing();
 private:
     int age;
     Homework * homework;
+    MatchGame * matchGame;
     int score=0;
 };
 #endif //MANAGER_HPP

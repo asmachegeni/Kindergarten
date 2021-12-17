@@ -3,7 +3,9 @@
 
 CMakeFiles/app.dir/src/Child.cpp.o: ../include/Child.hpp
 CMakeFiles/app.dir/src/Child.cpp.o: ../include/Homework.hpp
+CMakeFiles/app.dir/src/Child.cpp.o: ../include/MatchGame.hpp
 CMakeFiles/app.dir/src/Child.cpp.o: ../include/Person.hpp
+CMakeFiles/app.dir/src/Child.cpp.o: ../include/Square.hpp
 CMakeFiles/app.dir/src/Child.cpp.o: ../src/Child.cpp
 
 CMakeFiles/app.dir/src/Homework.cpp.o: ../include/Homework.hpp
@@ -16,7 +18,9 @@ CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/Child.hpp
 CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/Homework.hpp
 CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/Login.hpp
 CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/ManageKids.hpp
+CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/MatchGame.hpp
 CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/Person.hpp
+CMakeFiles/app.dir/src/ManageKids.cpp.o: ../include/Square.hpp
 CMakeFiles/app.dir/src/ManageKids.cpp.o: ../src/ManageKids.cpp
 
 CMakeFiles/app.dir/src/Manager.cpp.o: ../include/Manager.hpp
@@ -35,7 +39,9 @@ CMakeFiles/app.dir/src/Square.cpp.o: ../src/Square.cpp
 
 CMakeFiles/app.dir/src/Teacher.cpp.o: ../include/Child.hpp
 CMakeFiles/app.dir/src/Teacher.cpp.o: ../include/Homework.hpp
+CMakeFiles/app.dir/src/Teacher.cpp.o: ../include/MatchGame.hpp
 CMakeFiles/app.dir/src/Teacher.cpp.o: ../include/Person.hpp
+CMakeFiles/app.dir/src/Teacher.cpp.o: ../include/Square.hpp
 CMakeFiles/app.dir/src/Teacher.cpp.o: ../include/Teacher.hpp
 CMakeFiles/app.dir/src/Teacher.cpp.o: ../src/Teacher.cpp
 
