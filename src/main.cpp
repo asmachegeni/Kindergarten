@@ -18,40 +18,44 @@ int main()
 {
 
     Login login;
-    string username;
+    string username[3]={"CH5555","TE0710","MA1425"};
     // cin >> username;
-    string password;
+    string password[3]={"fffff","14045","Admin"};
     // cin >> password;
-
-    switch (login.searchUser("MA1425", "Admin"))
+    for (int i = 0; i < 3; ++i)
     {
-    case MANAGER:
-    {
-        // cout << "manager" << endl;
-        Manager Ma(login.getFirstName(), login.getLastName());
-        cout<<Ma.getFirstName();
-        // ManageKids s;
-        // s.addChild();
-        //  s.deleteChild("CH4623");
-        // s.editChild("CH4623");
-        cout << "\n ------------------------------------------------------\n";
-        // s.printPerson();
-        break;
-    }
-    case CHILD:
-    {
-        Child ch(login.getFirstName(), login.getAge());
-        cout << "child" << endl;
-        break;
-    }
-    case TEACHER:
-    {
-        Teacher teach(password,username);
-        teach.setHomework();
-    }
-    case UNDEFINED_USER:
-        cout << "UNDEFINED_USER" << endl;
-        break;
+        switch (login.searchUser(username[i], password[i])) {
+            case MANAGER: {
+                cout << "manager" << endl;
+                Manager Ma(login.getFirstName(), login.getLastName());
+                cout << Ma.getFirstName();
+                ManageKids s;
+//                 s.addPerson();
+                //  s.deletePerson("CH4623");
+                // s.editPerson("CH4623");
+                s.printPerson();
+                break;
+            }
+            case CHILD: {
+                cout << "child" << endl;
+                Child ch(login.getFirstName(), login.getAge());
+                //        ch.readFromFile();
+                //        ch.doHomework();
+                //        ch.setScore();
+                //cout<<ch.getScore()<<endl;
+                ch.playing();
+                break;
+            }
+            case TEACHER: {
+                cout << login.getFirstName() << "   " << login.getLastName() << endl;
+                Teacher teach(login.getFirstName(), login.getLastName());
+                teach.setHomework();
+                break;
+            }
+            case UNDEFINED_USER:
+                cout << "UNDEFINED_USER" << endl;
+                break;
+        }
     }
     return 0;
 }

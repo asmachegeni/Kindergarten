@@ -19,13 +19,16 @@ void Person::setFirstName(string FirstName)
             flag = 0;
         }
     }
-    if (!flag)
-    {
-        this->FirstName = FirstName;
+    try {
+        if (!flag) {
+            this->FirstName = FirstName;
+        } else {
+            throw invalid_argument("name is not valid");
+        }
     }
-    else
+    catch (invalid_argument &e)
     {
-        throw invalid_argument( "name is not valid");
+        cout<<e.what()<<endl;
     }
 }
 //---------------------------------------------------------------------
@@ -40,13 +43,16 @@ void Person::setLastName(string LastName)
             flag = 0;
         }
     }
-    if (!flag)
-    {
-        this->LastName = LastName;
+    try {
+        if (!flag) {
+            this->LastName = LastName;
+        } else {
+            throw invalid_argument("name is not valid");
+        }
     }
-    else
+    catch (invalid_argument &e)
     {
-        throw invalid_argument( "name is not valid");
+        cout<<e.what()<<endl;
     }
 }
 //---------------------------------------------------------------------
@@ -67,4 +73,5 @@ void Person::setHomework()
 {
 
 }
-
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------

@@ -32,18 +32,20 @@ void Teacher::writeToFile(int num1 ,int num2 ,int answer)
 void Teacher::setHomework()
 {
     try {
+        cout<<"Enter num1 ,num2 ,answer : ";
         int num1, num2, answer;
         cin >> num1 >> num2 >> answer;//get number for homework from teacher
         if (num1 < 20 && num2 < 20 && ((num1 + num2) == answer)) {
             writeToFile(num1,num2,answer);
+            cout<<" set homework "<<endl;
 
         } else {
             throw invalid_argument("Data is not valid");
         }
     }
-    catch (...)
+    catch (invalid_argument &e)
     {
-
+        cout<<e.what()<<endl;
     }
 }
 //-------------------------------------------------------------

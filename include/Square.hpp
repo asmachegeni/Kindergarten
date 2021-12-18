@@ -13,7 +13,7 @@ public:
     bool operator==(const Square &);
     bool  operator!();
 private:
-    std::string url;
+    std::string url="";
     bool isMatch= false;
 };
 #endif // SQUARE_HPP

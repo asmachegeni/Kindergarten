@@ -13,6 +13,9 @@ void Child::readFromFile()
         Home.clear();
         //write new data in file
         Home >>setw(3) >> num1 >> setw(3) >>num2 >> setw(3) >> answer ;
+        cout<<num1<<endl;
+        cout<<num2<<endl;
+        cout<<answer<<endl;
         setHomework(num1,num2,answer);
         Home.close();
     }
@@ -32,13 +35,17 @@ Child::Child(string FirstName, int age)
 //---------------------------------------------------------------------
 void Child::setAge(int age)
 {
-    if (age < 7 && age > 3) //Check the age must be less than 7 and more than 3
-    {
-        this->age = age;
+    try {
+        if (age < 7 && age > 3) //Check the age must be less than 7 and more than 3
+        {
+            this->age = age;
+        } else {
+            throw out_of_range("Age is not Valid!");
+        }
     }
-    else
+    catch (invalid_argument &e)
     {
-        throw out_of_range("Age is not Valid!");
+        cout<<e.what()<<endl;
     }
 }
 //---------------------------------------------------------------------
@@ -60,31 +67,49 @@ void Child::doHomework()
 {
     cout<<homework->getNum1()<<" + "<<homework->getNum2()<<" = ";
     int result;
-    cin>>result;
+    cin>>result;//get answer from child
     homework->setResult(result);
+    setScore(result);
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 void Child::setScore(int result)
 {
-    if(result==homework->getAnswer())
-    {
-        score+=20;
-    } else
-    {
-        throw invalid_argument("The answer is not correct");
+    try {
+        cout << "Answer :" << homework->getAnswer();
+        if (result == homework->getAnswer())//check result for setScore if result is correct
+        {
+            cout << "you answer is correct!" << endl;
+            score += 20;
+        } else {
+            throw invalid_argument("The answer is not correct");
+        }
     }
+    catch (invalid_argument &e)
+    {
+        cout<<e.what()<<endl;
+    }
+}
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+int Child::getScore()const
+{
+    return this->score;
 }
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 void Child::playing()
 {
+    cout<<"Game Started!"<<endl;
     int num1,num2;
-    cin>>num1>>num2;
+    matchGame=new MatchGame;
+    matchGame->setSquares();
     for (int i = 0; i < 6; ++i)
     {
+        cout<<"Enter num1 AND num2 :  ";
         cin>>num1>>num2;
         matchGame->checkUrl(num1,num2);
     }
 }
-
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------

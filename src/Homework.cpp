@@ -13,15 +13,18 @@ using namespace std;
 //-------------------------------------------------------------
 void Homework::setNums(int num1,int num2)
 {
-	if(num1<20 && num2<20)
-	{
-		this->num1=num1;
-		this->num2=num2;
-	}
-    else
-    {
-        throw  out_of_range("Numbers must be less than 20");
-    }
+     try {
+         if (num1 < 20 && num2 < 20) {
+             this->num1 = num1;
+             this->num2 = num2;
+         } else {
+             throw out_of_range("Numbers must be less than 20");
+         }
+     }
+     catch (out_of_range &e)
+     {
+         cout<<e.what()<<endl;
+     }
 }
 //-------------------------------------------------------------
 //-------------------------------------------------------------
@@ -44,14 +47,16 @@ int Homework::getNum2()const
 //-------------------------------------------------------------
 //-------------------------------------------------------------
  void Homework::setAnswer(int answer)
-{
-	if(answer==num1+num2)
-	{
-		this->answer=answer;
-	}
-    else
+{ try {
+        if (answer == num1 + num2) {
+            this->answer = answer;
+        } else {
+            throw invalid_argument("You did not enter the sum of the numbers correctly");
+        }
+    }
+    catch (invalid_argument &error)
     {
-        throw invalid_argument("You did not enter the sum of the numbers correctly");
+        cout<<error.what()<<endl;
     }
 }
 //-------------------------------------------------------------
@@ -66,4 +71,5 @@ int Homework::getAnswer()const
  {
  	this->result=result;
  }
-
+//-------------------------------------------------------------
+//-------------------------------------------------------------

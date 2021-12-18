@@ -7,15 +7,22 @@ using namespace std;
 void MatchGame::setSquares()
 {
     int count=0;
-    pair <Square,int>s();
    vector< pair <Square,int>> row;
-    for (int i = 0; i <4 ; ++i) {
-        for (int j = 0; j < 3; ++j) {
-            count++;
-            row[j].first.setUrl("Square");
-            row[j].second=count;
+   string url;
+   Square s(url);
+    for (int i = 0; i <4 ; ++i)
+    {
+        for (int j = 0; j < 3; ++j)
+        {
+            count+=1;
+            url= to_string(count%6) ;
+            s.setUrl(url);
+            s.setMatch(false);
+            pair <Square,int>p=make_pair(s,count);
+           row.push_back(p);
         }
         squares.push_back(row);
+        row.clear();
     }
 }
 //-----------------------------------------------------------------
@@ -27,7 +34,10 @@ void MatchGame::checkUrl(int square1 ,int square2)
     if(!Square1.first && !Square2.first) {
         if (Square1.first == Square2.first) {
             cout << "You guessed it right" << endl;
+            setIsMatch(square1,square2);
+
             setScore();
+            cout<<getScore()<<endl;
         } else {
             cout << "You guessed wrong" << endl;
         }
@@ -53,7 +63,7 @@ int MatchGame::getScore()const
 //-----------------------------------------------------------------
 std::pair <Square,int> MatchGame::searchSquare(int numberHouse)
 {
-    if(numberHouse<10) {
+    if(numberHouse<13) {
         for (int i = 0; i < 4; ++i) {
             for (int j = 0; j < 3; ++j) {
 
@@ -69,3 +79,32 @@ std::pair <Square,int> MatchGame::searchSquare(int numberHouse)
     }
     return squares[0][0];//for warning
 }
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+void MatchGame::setIsMatch(int square1 ,int square2)
+{
+
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 3; ++j) {
+
+            if (squares[i][j].second == square1 ||squares[i][j].second==square2)
+            {
+                squares[i][j].first.setMatch(true);
+            }
+        }
+    }
+}
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+void MatchGame::print()
+{
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 3; ++j) {
+
+                cout<<squares[i][j].first.getUrl()<<"   ";
+               cout<<squares[i][j].first.getMatch()<<endl;
+        }
+    }
+}
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------

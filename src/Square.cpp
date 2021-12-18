@@ -41,5 +41,5 @@ bool Square::operator==(const Square &square)
 //---------------------------------------------------------------------
 bool  Square::operator!()
 {
-    return this->isMatch;
+    return !this->isMatch;
 }

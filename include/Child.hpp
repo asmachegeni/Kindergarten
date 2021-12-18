@@ -13,6 +13,7 @@ public:
     void setHomework(int ,int ,int);
     void doHomework();
     void setScore(int);
+    int getScore()const;
     void readFromFile();
     void playing();
 private:

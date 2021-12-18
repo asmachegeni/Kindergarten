@@ -10,7 +10,9 @@ class MatchGame
 public:
     void setSquares();
     void checkUrl(int ,int);
+    void setIsMatch(int ,int);
     void setScore();
+    void print();
     int getScore()const;
     std::pair <Square,int> searchSquare(int);
 private:

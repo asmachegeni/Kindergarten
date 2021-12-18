@@ -90,57 +90,64 @@ void ManageKids::addPerson() {
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 void ManageKids::deletePerson(string username) {
-    if (searchUser(username)) {
+    try {
+        if (searchUser(username)) {
 
-        ifstream Data("./userData.txt", ios::in); //open file
-        if (Data.is_open()) {
-            Data.clear();
-            ofstream Datacopy("./userDatacopy.txt", ios::out); //open new file
-            if (!Datacopy.is_open()) {
-                cout << "Can not open the file!!!!!" << endl;
-            }
+            ifstream Data("./userData.txt", ios::in); //open file
+            if (Data.is_open()) {
+                Data.clear();
+                ofstream Datacopy("./userDatacopy.txt", ios::out); //open new file
+                if (!Datacopy.is_open()) {
+                    cout << "Can not open the file!!!!!" << endl;
+                }
 
-            while (1) {
-                //read data from file
-                Data >> setw(20) >> user.firstName >>
-                     setw(20) >> user.lastName >>
-                     setw(4) >> user.age >>
-                     setw(15) >> user.username >>
-                     setw(15) >> user.password;
-                if (Data.eof()) {
-                    break;
-                } else {
-                    if (user.username != username) {
-                        //write data in new file
-                        Datacopy << setw(20) << user.firstName
-                                 << setw(20) << user.lastName
-                                 << setw(4) << user.age
-                                 << setw(15) << user.username
-                                 << setw(15) << user.password << endl;
+                while (1) {
+                    //read data from file
+                    Data >> setw(20) >> user.firstName >>
+                         setw(20) >> user.lastName >>
+                         setw(4) >> user.age >>
+                         setw(15) >> user.username >>
+                         setw(15) >> user.password;
+                    if (Data.eof()) {
+                        break;
+                    } else {
+                        if (user.username != username) {
+                            //write data in new file
+                            Datacopy << setw(20) << user.firstName
+                                     << setw(20) << user.lastName
+                                     << setw(4) << user.age
+                                     << setw(15) << user.username
+                                     << setw(15) << user.password << endl;
+                        }
                     }
                 }
+                Datacopy.close();
             }
-            Datacopy.close();
+            Data.close();
+            remove("./userData.txt");
+            rename("./userDatacopy.txt", "./userData.txt");
+            cout << "user deleted" << endl;
+        } else {
+            throw invalid_argument("User is not exist");
         }
-        Data.close();
-        remove("./userData.txt");
-        rename("./userDatacopy.txt", "./userData.txt");
-        cout << "user deleted" << endl;
-    } else {
-        throw invalid_argument("User is not exist");
+    }
+    catch (invalid_argument &e)
+    {
+        cout<<e.what()<<endl;
     }
 }
 
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 void ManageKids::editPerson(string username) {
+    try
+    {
     if (searchUser(username)) {
         fstream Data("./userData.txt", ios::in | ios::out); //open file
         if (Data.is_open()) {
             Data.clear();
             ofstream Datacopy("./userDatacopy.txt", ios::out); //open new file
-            if (!Datacopy.is_open())
-            {
+            if (!Datacopy.is_open()) {
                 cout << "Can not open the file!!!!!" << endl;
             }
             while (1) {
@@ -230,6 +237,12 @@ void ManageKids::editPerson(string username) {
     } else {
         throw invalid_argument("User is not exist");
     }
+}
+    catch (invalid_argument &e)
+    {
+        cout<<e.what()<<endl;
+    }
+
 }
 
 //---------------------------------------------------------------------
