@@ -2,9 +2,9 @@
 #include <string>
 #include <fstream>
 #include <iomanip>
-#include "ManageKids.hpp"
-#include "Child.hpp"
-#include "Login.hpp"
+#include "../include/ManageKids.hpp"
+#include "../include/Child.hpp"
+#include "../include/Login.hpp"
 #include <stdexcept>
 
 using namespace std;

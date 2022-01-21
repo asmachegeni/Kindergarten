@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Homework.hpp"
+#include "../include/Homework.hpp"
 #include<stdexcept>
 using namespace std;
 //-------------------------------------------------------------

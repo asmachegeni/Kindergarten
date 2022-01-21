@@ -1,4 +1,4 @@
-#include "Square.hpp"
+#include "../include/Square.hpp"
 #include <iostream>
 using namespace std;
 //---------------------------------------------------------------------

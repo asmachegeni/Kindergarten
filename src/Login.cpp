@@ -2,7 +2,7 @@
 #include <string>
 #include <iomanip>
 #include <fstream>
-#include "Login.hpp"
+#include "../include/Login.hpp"
 #include<stdexcept>
 using namespace std;
 //---------------------------------------------------------------------
@@ -19,7 +19,7 @@ Login::~Login()
 //---------------------------------------------------------------------
 state Login::searchUser(string username, string password)
 {
-    ifstream Data("./userData.txt", ios::in); //open file
+    ifstream Data("../build/userData.txt", ios::in); //open file
     if (Data.is_open())
     {
         while (1)

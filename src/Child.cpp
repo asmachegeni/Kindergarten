@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <fstream>
 #include<stdexcept>
-#include "Child.hpp"
+#include "../include/Child.hpp"
 using namespace std;
 void Child::readFromFile()
 {

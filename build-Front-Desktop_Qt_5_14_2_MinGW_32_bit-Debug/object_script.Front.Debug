@@ -1,0 +1,13 @@
+debug/Child.o
+debug/Homework.o
+debug/Login.o
+debug/ManageKids.o
+debug/Manager.o
+debug/MatchGame.o
+debug/Person.o
+debug/Square.o
+debug/Teacher.o
+debug/handler.o
+debug/main.o
+debug/qrc_qml.o
+debug/moc_handler.o

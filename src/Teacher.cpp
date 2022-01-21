@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Teacher.hpp"
+#include "../include/Teacher.hpp"
 #include<string>
 #include<fstream>
 #include<iomanip>

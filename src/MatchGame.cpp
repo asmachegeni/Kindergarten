@@ -1,6 +1,6 @@
 #include<iostream>
-#include "MatchGame.hpp"
-#include "Square.hpp"
+#include "../include/MatchGame.hpp"
+#include "../include/Square.hpp"
 using namespace std;
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
