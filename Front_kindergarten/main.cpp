@@ -1,9 +1,11 @@
+
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include<QQmlContext>
 #include"handler.h"
 int main(int argc, char *argv[])
 {
+
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
@@ -23,3 +25,4 @@ int main(int argc, char *argv[])
 
     return app.exec();
 }
+

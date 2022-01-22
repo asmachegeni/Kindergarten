@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.12
 
-Window {
+ApplicationWindow {
     id: window
     visible: true
     width: Screen.width
@@ -64,28 +64,6 @@ Window {
                 font.pixelSize: 40
                 color: "#311B92"
             }
-            Button {
-                id: button
-                x: 257
-                y: 542
-                width: 284
-                height: 66
-                text: qsTr("login")
-                font.pixelSize: 20
-                palette {
-                    buttonText: "white"
-                }
-                background: Rectangle {
-                    radius: 10
-                    color: "#673AB7"
-                }
-                Connections {
-                    target: button
-                    onClicked: {
-                        MyHandler.loginUser(textField.text, textField1.text)
-                    }
-                }
-            }
 
             TextField {
                 id: textField
@@ -106,6 +84,29 @@ Window {
                 width: 287
                 height: 66
                 placeholderText: qsTr("Password")
+                echoMode: TextInput.Password
+            }
+            Button {
+                id: button
+                x: 257
+                y: 542
+                width: 284
+                height: 66
+                text: qsTr("login")
+                font.pixelSize: 20
+                palette {
+                    buttonText: "white"
+                }
+                background: Rectangle {
+                    radius: 10
+                    color: "#673AB7"
+                }
+            }
+            Connections {
+                target: button
+                onClicked: {
+                    MyHandler.loginUser(textField.text, textField1.text)
+                }
             }
         }
 

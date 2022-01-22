@@ -4,5 +4,8 @@
         <file>LoginPage.qml</file>
         <file>../assets/Teaching2.png</file>
         <file>../assets/close.png</file>
+        <file>SelectPage.qml</file>
+        <file>../assets/game.png</file>
+        <file>../assets/study.png</file>
     </qresource>
 </RCC>

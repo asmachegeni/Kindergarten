@@ -141,13 +141,13 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_qml.cpp
 debug/qrc_qml.cpp: ../Front_kindergarten/qml.qrc \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/bin/rcc.exe \
+		../Front_kindergarten/SelectPage.qml \
 		../Front_kindergarten/LoginPage.qml \
 		../Front_kindergarten/main.qml \
-		../assets/124.jpg \
+		../assets/game.png \
 		../assets/close.png \
-		../assets/Teaching.gif \
 		../assets/Teaching2.png \
-		../assets/Teaching1.mp4
+		../assets/study.png
 	D:\Qt\Qt5.14.2\5.14.2\mingw73_32\bin\rcc.exe -name qml ..\Front_kindergarten\qml.qrc -o debug\qrc_qml.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h

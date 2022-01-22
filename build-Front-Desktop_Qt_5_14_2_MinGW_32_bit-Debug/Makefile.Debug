@@ -276,7 +276,7 @@ debug/MatchGame.o: ../../../AP2/Kindergarten/src/MatchGame.cpp ../../../AP2/Kind
 		../../../AP2/Kindergarten/include/Square.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MatchGame.o ..\..\..\AP2\Kindergarten\src\MatchGame.cpp
 
-debug/Person.o: ../../../AP2/Kindergarten/src/Person.cpp ../../../AP2/Kindergarten/include/person.hpp
+debug/Person.o: ../../../AP2/Kindergarten/src/Person.cpp ../../../AP2/Kindergarten/include/Person.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Person.o ..\..\..\AP2\Kindergarten\src\Person.cpp
 
 debug/Square.o: ../../../AP2/Kindergarten/src/Square.cpp ../../../AP2/Kindergarten/include/Square.hpp

@@ -4,6 +4,7 @@
 #include <fstream>
 #include "../include/Login.hpp"
 #include<stdexcept>
+#include<QtDebug>
 using namespace std;
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------

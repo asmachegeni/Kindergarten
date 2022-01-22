@@ -1,6 +1,7 @@
 #ifndef HANDLER_H
 #define HANDLER_H
 #include <QObject>
+#include <QDebug>
 #include"../include/Login.hpp"
 #include"../include/Person.hpp"
 #include"../include/Manager.hpp"
@@ -15,7 +16,7 @@ class Handler : public QObject
 public:
     explicit Handler(QObject *parent = nullptr);
     Login login;
-    ManageKids manage;
+//    ManageKids manage;
     signals:
     //----------------------------------------------------
     //for login

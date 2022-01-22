@@ -247,6 +247,7 @@ Makefile: ../../../AP2/Kindergarten/Front/Front.pro ../../../Qt/Qt5.14.2/5.14.2/
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/qt_config.prf \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/win32-g++/qmake.conf \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/toolchain.prf \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/default_pre.prf \
@@ -277,7 +278,6 @@ Makefile: ../../../AP2/Kindergarten/Front/Front.pro ../../../Qt/Qt5.14.2/5.14.2/
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/lib/Qt5Network.prl \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/lib/Qt5Core.prl \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/lib/qtmain.prl \
-		.qmake.stash \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/build_pass.prf \
 		../../../AP2/Kindergarten/Front/qml.qrc
 	$(QMAKE) -o Makefile ..\..\..\AP2\Kindergarten\Front\Front.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -458,6 +458,7 @@ Makefile: ../../../AP2/Kindergarten/Front/Front.pro ../../../Qt/Qt5.14.2/5.14.2/
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/qt_config.prf:
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/win32-g++/qmake.conf:
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/exclusive_builds.prf:
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/toolchain.prf:
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/default_pre.prf:
@@ -488,7 +489,6 @@ Makefile: ../../../AP2/Kindergarten/Front/Front.pro ../../../Qt/Qt5.14.2/5.14.2/
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/lib/Qt5Network.prl:
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/lib/Qt5Core.prl:
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/lib/qtmain.prl:
-.qmake.stash:
 ../../../Qt/Qt5.14.2/5.14.2/mingw73_32/mkspecs/features/build_pass.prf:
 ../../../AP2/Kindergarten/Front/qml.qrc:
 qmake: FORCE

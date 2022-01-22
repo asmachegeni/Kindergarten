@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/person.hpp"
+#include "../include/Person.hpp"
 #include <stdexcept>
 using namespace std;
 //---------------------------------------------------------------------

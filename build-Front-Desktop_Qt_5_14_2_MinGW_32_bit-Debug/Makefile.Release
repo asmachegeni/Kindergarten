@@ -276,7 +276,7 @@ release/MatchGame.o: ../../../AP2/Kindergarten/src/MatchGame.cpp ../../../AP2/Ki
 		../../../AP2/Kindergarten/include/Square.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\MatchGame.o ..\..\..\AP2\Kindergarten\src\MatchGame.cpp
 
-release/Person.o: ../../../AP2/Kindergarten/src/Person.cpp ../../../AP2/Kindergarten/include/person.hpp
+release/Person.o: ../../../AP2/Kindergarten/src/Person.cpp ../../../AP2/Kindergarten/include/Person.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\Person.o ..\..\..\AP2\Kindergarten\src\Person.cpp
 
 release/Square.o: ../../../AP2/Kindergarten/src/Square.cpp ../../../AP2/Kindergarten/include/Square.hpp
