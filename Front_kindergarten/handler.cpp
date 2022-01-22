@@ -39,3 +39,20 @@ void Handler::loginUser(QString username,QString  password)
 }
 //--------------------------------------------------------------
 //--------------------------------------------------------------
+void  Handler::userteacher(QString num1,QString num2)
+{
+//    qDebug()<<num1.toInt();
+//    qDebug()<<num2.toInt();
+    Teacher teacher(login.getFirstName(),login.getLastName());
+    int answer=num1.toInt()+num2.toInt();
+    try {
+        teacher.writeToFile(num1.toStdString(),num2.toStdString(),answer);
+        emit correcthomework();
+    } catch (...) {
+        emit wronghomewotk();
+
+    }
+
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------

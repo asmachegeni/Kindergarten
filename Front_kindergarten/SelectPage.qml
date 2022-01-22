@@ -5,8 +5,6 @@ import QtQuick.Window 2.12
 ApplicationWindow {
     id: window
     visible: true
-    width: Screen.width
-    height: Screen.height
     title: qsTr("Kindergarten")
     color: "#673AB7"
     signal game
@@ -92,10 +90,6 @@ ApplicationWindow {
 
     Button {
         id: button
-        x: 21
-        y: 919
-        width: 70
-        height: 34
         text: qsTr("Back")
         palette {
             buttonText: "white"

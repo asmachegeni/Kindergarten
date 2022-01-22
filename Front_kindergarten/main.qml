@@ -13,7 +13,7 @@ ApplicationWindow {
         id: comp1
         LoginPage {
 
-            //            onUserteacher:
+            onUserteacher: myloader.sourceComponent = comp3
             //            onUsermanager: myloader.sourceComponent = comp3
             onUserchild: myloader.sourceComponent = comp2
         }
@@ -23,7 +23,12 @@ ApplicationWindow {
         SelectPage {
             onGame: myloader.sourceComponent = comp1
             onBacklogin: myloader.sourceComponent = comp1
-            //            onHomework: console.log("home work")
+        }
+    }
+    Component {
+        id: comp3
+        Teacher {
+            onBackhome: myloader.sourceComponent = comp1
         }
     }
 }

@@ -141,13 +141,16 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_qml.cpp
 release/qrc_qml.cpp: ../Front_kindergarten/qml.qrc \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/bin/rcc.exe \
+		../Front_kindergarten/Teacher.qml \
 		../Front_kindergarten/SelectPage.qml \
 		../Front_kindergarten/LoginPage.qml \
 		../Front_kindergarten/main.qml \
 		../assets/game.png \
 		../assets/close.png \
 		../assets/Teaching2.png \
-		../assets/study.png
+		../assets/Teaching1.png \
+		../assets/study.png \
+		../assets/wave.png
 	D:\Qt\Qt5.14.2\5.14.2\mingw73_32\bin\rcc.exe -name qml ..\Front_kindergarten\qml.qrc -o release\qrc_qml.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
@@ -213,6 +216,19 @@ release/moc_handler.cpp: ../Front_kindergarten/handler.h \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/QDebug \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qset.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		../include/Login.hpp \
 		../include/Person.hpp \
 		../include/Manager.hpp \
@@ -252,7 +268,72 @@ release/Child.o: ../src/Child.cpp ../include/Child.hpp \
 release/Homework.o: ../src/Homework.cpp ../include/Homework.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\Homework.o ..\src\Homework.cpp
 
-release/Login.o: ../src/Login.cpp ../include/Login.hpp
+release/Login.o: ../src/Login.cpp ../include/Login.hpp \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/QtDebug \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qalgorithms.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qglobal.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qconfig-bootstrapped.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qconfig.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qtcore-config.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qsystemdetection.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qprocessordetection.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcompilerdetection.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qtypeinfo.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qsysinfo.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qlogging.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qflags.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qatomic.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qbasicatomic.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qatomic_bootstrap.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qgenericatomic.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qatomic_cxx11.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qatomic_msvc.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qglobalstatic.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qmutex.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qnumeric.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qversiontagging.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qchar.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qiterator.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qlist.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qrefcount.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qarraydata.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qhashfunctions.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qstring.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qbytearray.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qnamespace.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qstringliteral.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qstringalgorithms.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qstringview.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qstringbuilder.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qpair.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qvector.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcontainertools_impl.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qpoint.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qbytearraylist.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qstringlist.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qregexp.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qstringmatcher.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qobject.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qobjectdefs.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qobjectdefs_impl.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcoreevent.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qscopedpointer.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qmetatype.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qset.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\Login.o ..\src\Login.cpp
 
 release/ManageKids.o: ../src/ManageKids.cpp ../include/ManageKids.hpp \
@@ -272,7 +353,7 @@ release/MatchGame.o: ../src/MatchGame.cpp ../include/MatchGame.hpp \
 		../include/Square.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\MatchGame.o ..\src\MatchGame.cpp
 
-release/Person.o: ../src/Person.cpp ../include/person.hpp
+release/Person.o: ../src/Person.cpp ../include/Person.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\Person.o ..\src\Person.cpp
 
 release/Square.o: ../src/Square.cpp ../include/Square.hpp
@@ -340,6 +421,19 @@ release/handler.o: ../Front_kindergarten/handler.cpp ../Front_kindergarten/handl
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qvarlengtharray.h \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcontainerfwd.h \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qobject_impl.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/QDebug \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qdebug.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qhash.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qmap.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qtextstream.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qiodevice.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qlocale.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qvariant.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qshareddata.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qset.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qcontiguouscache.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qsharedpointer.h \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/qsharedpointer_impl.h \
 		../include/Login.hpp \
 		../include/Person.hpp \
 		../include/Manager.hpp \
@@ -450,6 +544,7 @@ release/main.o: ../Front_kindergarten/main.cpp ../../../Qt/Qt5.14.2/5.14.2/mingw
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtQml/qqmlcontext.h \
 		../Front_kindergarten/handler.h \
 		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/QObject \
+		../../../Qt/Qt5.14.2/5.14.2/mingw73_32/include/QtCore/QDebug \
 		../include/Login.hpp \
 		../include/Person.hpp \
 		../include/Manager.hpp \

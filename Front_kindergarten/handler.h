@@ -25,8 +25,13 @@ public:
     void manager();
     void unknown();
     //---------------------------------------------------
+    //for teacher
+    //for teacher
+    void  correcthomework();
+    void  wronghomewotk();
 public slots:
 void loginUser(QString username,QString  password);
+void  userteacher(QString num1,QString num2);
 };
 
 #endif // HANDLER_H
