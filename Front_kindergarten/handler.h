@@ -8,7 +8,7 @@
 #include"../include/Teacher.hpp"
 #include"../include/Child.hpp"
 #include"../include/ManageKids.hpp"
-
+#include"../include/Homework.hpp"
 
 class Handler : public QObject
 {
@@ -16,6 +16,10 @@ class Handler : public QObject
 public:
     explicit Handler(QObject *parent = nullptr);
     Login login;
+   int n1;
+    int n2;
+
+
 //    ManageKids manage;
     signals:
     //----------------------------------------------------
@@ -26,12 +30,21 @@ public:
     void unknown();
     //---------------------------------------------------
     //for teacher
-    //for teacher
     void  correcthomework();
     void  wronghomewotk();
+    //---------------------------------------------------
+    //for child
+    void  correctdohomework();
+    void  wrongdohomework();
+
 public slots:
 void loginUser(QString username,QString  password);
 void  userteacher(QString num1,QString num2);
+int getnum1();
+int getnum2();
+void setnum1(int);
+void setnum2(int);
+void doHomework(QString);
 };
 
 #endif // HANDLER_H

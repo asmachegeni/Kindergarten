@@ -5,6 +5,8 @@ import QtQuick.Window 2.12
 ApplicationWindow {
     id: window
     visible: true
+    width: Screen.width
+    height: Screen.height
     title: qsTr("Kindergarten")
     color: "#673AB7"
     signal game

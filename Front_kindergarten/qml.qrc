@@ -10,5 +10,11 @@
         <file>Teacher.qml</file>
         <file>../assets/wave.png</file>
         <file>../assets/Teaching1.png</file>
+        <file>../assets/game1.jpg</file>
+        <file>HomeworkPage.qml</file>
+        <file>../assets/homework.png</file>
+        <file>../assets/happy1.png</file>
+        <file>../assets/miness.png</file>
+        <file>../assets/plus.png</file>
     </qresource>
 </RCC>

@@ -11,15 +11,21 @@ public:
     void setAge(int);
     int getAge() const;
     void setHomework(int ,int ,int);
-    void doHomework();
+    void doHomework(int);
     void setScore(int);
     int getScore()const;
     void readFromFile();
     void playing();
+    int getNum1()const;
+    int getNum2()const;
+    int getAnswer()const;
 private:
     int age;
     Homework * homework;
     MatchGame * matchGame;
     int score=0;
+    int num1;
+    int num2;
+    int answer;
 };
 #endif //MANAGER_HPP

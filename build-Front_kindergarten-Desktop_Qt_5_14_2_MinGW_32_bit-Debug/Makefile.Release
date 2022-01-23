@@ -144,10 +144,16 @@ release/qrc_qml.cpp: ../Front_kindergarten/qml.qrc \
 		../Front_kindergarten/Teacher.qml \
 		../Front_kindergarten/SelectPage.qml \
 		../Front_kindergarten/LoginPage.qml \
+		../Front_kindergarten/HomeworkPage.qml \
 		../Front_kindergarten/main.qml \
 		../assets/game.png \
 		../assets/close.png \
+		../assets/happy1.png \
+		../assets/miness.png \
+		../assets/game1.jpg \
 		../assets/Teaching2.png \
+		../assets/homework.png \
+		../assets/plus.png \
 		../assets/Teaching1.png \
 		../assets/study.png \
 		../assets/wave.png

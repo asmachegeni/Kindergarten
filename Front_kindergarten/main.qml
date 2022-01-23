@@ -22,6 +22,7 @@ ApplicationWindow {
         id: comp2
         SelectPage {
             onGame: myloader.sourceComponent = comp1
+            onHomework: myloader.sourceComponent = comp4
             onBacklogin: myloader.sourceComponent = comp1
         }
     }
@@ -29,6 +30,12 @@ ApplicationWindow {
         id: comp3
         Teacher {
             onBackhome: myloader.sourceComponent = comp1
+        }
+    }
+    Component {
+        id: comp4
+        HomeworkPage {
+            onBackselect: myloader.sourceComponent = comp1
         }
     }
 }

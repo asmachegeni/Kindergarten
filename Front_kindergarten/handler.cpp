@@ -1,8 +1,11 @@
 #include "handler.h"
-
+#include<fstream>
 Handler::Handler(QObject *parent) : QObject(parent)
 {
-
+    Child ch(login.getFirstName(),5);
+    ch.readFromFile();
+    setnum1(ch.getNum1());
+    setnum2(ch.getNum2());
 }
 //--------------------------------------------------------------
 //--------------------------------------------------------------
@@ -28,6 +31,9 @@ void Handler::loginUser(QString username,QString  password)
         case CHILD:
         {
             emit child();
+//        Child ch(login.getFirstName(),5);
+//        setnum1(ch.getNum1());
+//        setnum2(ch.getNum2());
              break;
         }
         case UNDEFINED_USER:
@@ -53,6 +59,47 @@ void  Handler::userteacher(QString num1,QString num2)
 
     }
 
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+void Handler::doHomework(QString answer)
+{
+    Child ch(login.getFirstName(),5);
+    ch.readFromFile();
+//    setnum1(ch.getNum1());
+//    setnum2(ch.getNum2());
+    try {
+        ch.doHomework(answer.toInt());
+        emit correctdohomework();
+    } catch (...) {
+        emit wrongdohomework();
+    }
+
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+void Handler::setnum1(int n1)
+{
+//    QString s = QString::number(n1);
+    this->n1=n1;
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+void Handler::setnum2(int n2)
+{
+this->n2=n2;
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+int Handler::getnum1()
+{
+    return  this->n1;
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+int Handler::getnum2()
+{
+    return  this->n2;
 }
 //--------------------------------------------------------------
 //--------------------------------------------------------------
