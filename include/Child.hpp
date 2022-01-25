@@ -15,7 +15,7 @@ public:
     void setScore(int);
     int getScore()const;
     void readFromFile();
-    void playing();
+    void playing(int ,int);
     int getNum1()const;
     int getNum2()const;
     int getAnswer()const;

@@ -36,6 +36,8 @@ public:
     //for child
     void  correctdohomework();
     void  wrongdohomework();
+    void gameSuccessful();
+    void gameUnsuccessful();
 
 public slots:
 void loginUser(QString username,QString  password);
@@ -45,6 +47,7 @@ int getnum2();
 void setnum1(int);
 void setnum2(int);
 void doHomework(QString);
+void game(int num1 ,int num2);
 };
 
 #endif // HANDLER_H

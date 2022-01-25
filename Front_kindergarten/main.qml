@@ -21,7 +21,7 @@ ApplicationWindow {
     Component {
         id: comp2
         SelectPage {
-            onGame: myloader.sourceComponent = comp1
+            onGame: myloader.sourceComponent = comp5
             onHomework: myloader.sourceComponent = comp4
             onBacklogin: myloader.sourceComponent = comp1
         }
@@ -35,7 +35,13 @@ ApplicationWindow {
     Component {
         id: comp4
         HomeworkPage {
-            onBackselect: myloader.sourceComponent = comp1
+            onBackselect: myloader.sourceComponent = comp2
+        }
+    }
+    Component {
+        id: comp5
+        Game {
+            onBackpage: myloader.sourceComponent = comp2
         }
     }
 }

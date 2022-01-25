@@ -92,6 +92,10 @@ ApplicationWindow {
 
     Button {
         id: button
+        x: 46
+        y: 919
+        width: 107
+        height: 44
         text: qsTr("Back")
         palette {
             buttonText: "white"

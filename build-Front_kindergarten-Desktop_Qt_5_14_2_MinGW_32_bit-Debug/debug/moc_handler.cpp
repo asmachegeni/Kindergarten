@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Handler_t {
-    QByteArrayData data[21];
-    char stringdata0[196];
+    QByteArrayData data[24];
+    char stringdata0[233];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -42,25 +42,29 @@ QT_MOC_LITERAL(6, 39, 15), // "correcthomework"
 QT_MOC_LITERAL(7, 55, 13), // "wronghomewotk"
 QT_MOC_LITERAL(8, 69, 17), // "correctdohomework"
 QT_MOC_LITERAL(9, 87, 15), // "wrongdohomework"
-QT_MOC_LITERAL(10, 103, 9), // "loginUser"
-QT_MOC_LITERAL(11, 113, 8), // "username"
-QT_MOC_LITERAL(12, 122, 8), // "password"
-QT_MOC_LITERAL(13, 131, 11), // "userteacher"
-QT_MOC_LITERAL(14, 143, 4), // "num1"
-QT_MOC_LITERAL(15, 148, 4), // "num2"
-QT_MOC_LITERAL(16, 153, 7), // "getnum1"
-QT_MOC_LITERAL(17, 161, 7), // "getnum2"
-QT_MOC_LITERAL(18, 169, 7), // "setnum1"
-QT_MOC_LITERAL(19, 177, 7), // "setnum2"
-QT_MOC_LITERAL(20, 185, 10) // "doHomework"
+QT_MOC_LITERAL(10, 103, 14), // "gameSuccessful"
+QT_MOC_LITERAL(11, 118, 16), // "gameUnsuccessful"
+QT_MOC_LITERAL(12, 135, 9), // "loginUser"
+QT_MOC_LITERAL(13, 145, 8), // "username"
+QT_MOC_LITERAL(14, 154, 8), // "password"
+QT_MOC_LITERAL(15, 163, 11), // "userteacher"
+QT_MOC_LITERAL(16, 175, 4), // "num1"
+QT_MOC_LITERAL(17, 180, 4), // "num2"
+QT_MOC_LITERAL(18, 185, 7), // "getnum1"
+QT_MOC_LITERAL(19, 193, 7), // "getnum2"
+QT_MOC_LITERAL(20, 201, 7), // "setnum1"
+QT_MOC_LITERAL(21, 209, 7), // "setnum2"
+QT_MOC_LITERAL(22, 217, 10), // "doHomework"
+QT_MOC_LITERAL(23, 228, 4) // "game"
 
     },
     "Handler\0teacher\0\0child\0manager\0unknown\0"
     "correcthomework\0wronghomewotk\0"
     "correctdohomework\0wrongdohomework\0"
+    "gameSuccessful\0gameUnsuccessful\0"
     "loginUser\0username\0password\0userteacher\0"
     "num1\0num2\0getnum1\0getnum2\0setnum1\0"
-    "setnum2\0doHomework"
+    "setnum2\0doHomework\0game"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,31 +74,34 @@ static const uint qt_meta_data_Handler[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       8,       // signalCount
+      10,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   89,    2, 0x06 /* Public */,
-       3,    0,   90,    2, 0x06 /* Public */,
-       4,    0,   91,    2, 0x06 /* Public */,
-       5,    0,   92,    2, 0x06 /* Public */,
-       6,    0,   93,    2, 0x06 /* Public */,
-       7,    0,   94,    2, 0x06 /* Public */,
-       8,    0,   95,    2, 0x06 /* Public */,
-       9,    0,   96,    2, 0x06 /* Public */,
+       1,    0,  104,    2, 0x06 /* Public */,
+       3,    0,  105,    2, 0x06 /* Public */,
+       4,    0,  106,    2, 0x06 /* Public */,
+       5,    0,  107,    2, 0x06 /* Public */,
+       6,    0,  108,    2, 0x06 /* Public */,
+       7,    0,  109,    2, 0x06 /* Public */,
+       8,    0,  110,    2, 0x06 /* Public */,
+       9,    0,  111,    2, 0x06 /* Public */,
+      10,    0,  112,    2, 0x06 /* Public */,
+      11,    0,  113,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      10,    2,   97,    2, 0x0a /* Public */,
-      13,    2,  102,    2, 0x0a /* Public */,
-      16,    0,  107,    2, 0x0a /* Public */,
-      17,    0,  108,    2, 0x0a /* Public */,
-      18,    1,  109,    2, 0x0a /* Public */,
-      19,    1,  112,    2, 0x0a /* Public */,
-      20,    1,  115,    2, 0x0a /* Public */,
+      12,    2,  114,    2, 0x0a /* Public */,
+      15,    2,  119,    2, 0x0a /* Public */,
+      18,    0,  124,    2, 0x0a /* Public */,
+      19,    0,  125,    2, 0x0a /* Public */,
+      20,    1,  126,    2, 0x0a /* Public */,
+      21,    1,  129,    2, 0x0a /* Public */,
+      22,    1,  132,    2, 0x0a /* Public */,
+      23,    2,  135,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -105,15 +112,18 @@ static const uint qt_meta_data_Handler[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,   11,   12,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,   14,   15,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,   13,   14,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,   16,   17,
     QMetaType::Int,
     QMetaType::Int,
     QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   16,   17,
 
        0        // eod
 };
@@ -132,15 +142,18 @@ void Handler::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 5: _t->wronghomewotk(); break;
         case 6: _t->correctdohomework(); break;
         case 7: _t->wrongdohomework(); break;
-        case 8: _t->loginUser((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
-        case 9: _t->userteacher((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
-        case 10: { int _r = _t->getnum1();
+        case 8: _t->gameSuccessful(); break;
+        case 9: _t->gameUnsuccessful(); break;
+        case 10: _t->loginUser((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+        case 11: _t->userteacher((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+        case 12: { int _r = _t->getnum1();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 11: { int _r = _t->getnum2();
+        case 13: { int _r = _t->getnum2();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 12: _t->setnum1((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 13: _t->setnum2((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 14: _t->doHomework((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 14: _t->setnum1((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 15: _t->setnum2((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 16: _t->doHomework((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 17: _t->game((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -201,6 +214,20 @@ void Handler::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
                 return;
             }
         }
+        {
+            using _t = void (Handler::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Handler::gameSuccessful)) {
+                *result = 8;
+                return;
+            }
+        }
+        {
+            using _t = void (Handler::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Handler::gameUnsuccessful)) {
+                *result = 9;
+                return;
+            }
+        }
     }
 }
 
@@ -233,13 +260,13 @@ int Handler::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 18;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 18)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 15;
+        _id -= 18;
     }
     return _id;
 }
@@ -290,6 +317,18 @@ void Handler::correctdohomework()
 void Handler::wrongdohomework()
 {
     QMetaObject::activate(this, &staticMetaObject, 7, nullptr);
+}
+
+// SIGNAL 8
+void Handler::gameSuccessful()
+{
+    QMetaObject::activate(this, &staticMetaObject, 8, nullptr);
+}
+
+// SIGNAL 9
+void Handler::gameUnsuccessful()
+{
+    QMetaObject::activate(this, &staticMetaObject, 9, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

@@ -31,9 +31,6 @@ void Handler::loginUser(QString username,QString  password)
         case CHILD:
         {
             emit child();
-//        Child ch(login.getFirstName(),5);
-//        setnum1(ch.getNum1());
-//        setnum2(ch.getNum2());
              break;
         }
         case UNDEFINED_USER:
@@ -47,8 +44,6 @@ void Handler::loginUser(QString username,QString  password)
 //--------------------------------------------------------------
 void  Handler::userteacher(QString num1,QString num2)
 {
-//    qDebug()<<num1.toInt();
-//    qDebug()<<num2.toInt();
     Teacher teacher(login.getFirstName(),login.getLastName());
     int answer=num1.toInt()+num2.toInt();
     try {
@@ -66,8 +61,6 @@ void Handler::doHomework(QString answer)
 {
     Child ch(login.getFirstName(),5);
     ch.readFromFile();
-//    setnum1(ch.getNum1());
-//    setnum2(ch.getNum2());
     try {
         ch.doHomework(answer.toInt());
         emit correctdohomework();
@@ -80,7 +73,6 @@ void Handler::doHomework(QString answer)
 //--------------------------------------------------------------
 void Handler::setnum1(int n1)
 {
-//    QString s = QString::number(n1);
     this->n1=n1;
 }
 //--------------------------------------------------------------
@@ -100,6 +92,19 @@ int Handler::getnum1()
 int Handler::getnum2()
 {
     return  this->n2;
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+void Handler::game(int num1,int num2)
+{
+
+  Child child(login.getFirstName(),5);
+  try {
+    child.playing(num1,num2);
+      emit gameSuccessful();   
+  } catch (...) {      
+      emit gameUnsuccessful();
+  }
 }
 //--------------------------------------------------------------
 //--------------------------------------------------------------

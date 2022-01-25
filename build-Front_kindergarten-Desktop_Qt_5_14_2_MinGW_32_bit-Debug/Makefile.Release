@@ -145,16 +145,23 @@ release/qrc_qml.cpp: ../Front_kindergarten/qml.qrc \
 		../Front_kindergarten/SelectPage.qml \
 		../Front_kindergarten/LoginPage.qml \
 		../Front_kindergarten/HomeworkPage.qml \
+		../Front_kindergarten/Game.qml \
 		../Front_kindergarten/main.qml \
 		../assets/game.png \
 		../assets/close.png \
+		../assets/4.jpg \
 		../assets/happy1.png \
 		../assets/miness.png \
+		../assets/3.jpg \
 		../assets/game1.jpg \
 		../assets/Teaching2.png \
 		../assets/homework.png \
+		../assets/2.jpg \
+		../assets/6.jpg \
 		../assets/plus.png \
 		../assets/Teaching1.png \
+		../assets/1.jpg \
+		../assets/5.jpg \
 		../assets/study.png \
 		../assets/wave.png
 	D:\Qt\Qt5.14.2\5.14.2\mingw73_32\bin\rcc.exe -name qml ..\Front_kindergarten\qml.qrc -o release\qrc_qml.cpp
