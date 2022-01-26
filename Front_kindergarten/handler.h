@@ -16,6 +16,7 @@ class Handler : public QObject
 public:
     explicit Handler(QObject *parent = nullptr);
     Login login;
+    ManageKids manage;
    int n1;
     int n2;
 
@@ -38,7 +39,14 @@ public:
     void  wrongdohomework();
     void gameSuccessful();
     void gameUnsuccessful();
-
+    //---------------------------------------------------
+    //for Mnager
+    void deleteSuccessful();
+    void deleteUnsuccessful();
+    void addSuccessful();
+    void addUnsuccessful();
+    void editSuccessful();
+    void editUnsuccessful();
 public slots:
 void loginUser(QString username,QString  password);
 void  userteacher(QString num1,QString num2);
@@ -48,6 +56,9 @@ void setnum1(int);
 void setnum2(int);
 void doHomework(QString);
 void game(int num1 ,int num2);
+void deleteuser(QString username);
+void adduser(QString firstname,QString lastname,QString age,QString username,QString password);
+void  edituser(QString username,QString item,int selection);
 };
 
 #endif // HANDLER_H

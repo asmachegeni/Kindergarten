@@ -108,3 +108,42 @@ void Handler::game(int num1,int num2)
 }
 //--------------------------------------------------------------
 //--------------------------------------------------------------
+void Handler::deleteuser(QString username)
+{
+    try {
+         manage.deletePerson(username.toStdString());
+         emit  deleteSuccessful();
+
+    } catch (...) {
+        emit deleteUnsuccessful();
+    }
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+void Handler::adduser(QString firstname,QString lastname,QString age,QString username,QString password)
+{
+    try {
+        manage.addPerson(firstname.toStdString(),lastname.toStdString(),age.toInt(),username.toStdString(),password.toStdString());
+        emit addSuccessful();
+
+
+    } catch (...) {
+        emit addUnsuccessful();
+
+
+    }
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
+void  Handler::edituser(QString username,QString item,int selection)
+{
+    try {
+            manage.editPerson(username.toStdString(),item.toStdString(),selection);
+       emit editSuccessful();
+
+    } catch (...) {
+          emit editUnsuccessful();
+    }
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------

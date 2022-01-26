@@ -6,9 +6,9 @@
 class ManageKids
 {
 public:
-    void addPerson();
+    void addPerson(std::string,std::string,int,std::string,std::string);
     void deletePerson(std::string);
-    void editPerson(std::string);
+    void editPerson(std::string,std::string,int);
     void printPerson();
     bool searchUser(std::string);
     bool ValidationName(std::string);

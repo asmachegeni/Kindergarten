@@ -14,7 +14,7 @@ ApplicationWindow {
         LoginPage {
 
             onUserteacher: myloader.sourceComponent = comp3
-            //            onUsermanager: myloader.sourceComponent = comp3
+            onUsermanager: myloader.sourceComponent = comp6
             onUserchild: myloader.sourceComponent = comp2
         }
     }
@@ -42,6 +42,12 @@ ApplicationWindow {
         id: comp5
         Game {
             onBackpage: myloader.sourceComponent = comp2
+        }
+    }
+    Component {
+        id: comp6
+        Manage {
+            onExit: myloader.sourceComponent = comp1
         }
     }
 }

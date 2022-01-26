@@ -12,7 +12,7 @@ using namespace std;
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 bool ManageKids::searchUser(string username) {
-    ifstream Data("./userData.txt", ios::in); //open file
+    ifstream Data("../build/userData.txt", ios::in); //open file
     if (Data.is_open()) {
         Data.clear(); //to read the correct information from the file
         while (1) {
@@ -48,55 +48,59 @@ bool ManageKids::searchUser(string username) {
 
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void ManageKids::addPerson() {
-    ofstream Data("./userData.txt", ios::app); //open file
+void ManageKids::addPerson(string firstName,string lastName,int age,string username,string password) {
+    ofstream Data("../build/userData.txt", ios::app); //open file
     if (Data.is_open()) {
-        cout << "Enter Firstname:";
-        cin >> temp.firstName;
-        cout << "Enter Lastname:";
-        cin >> temp.lastName;
-        cout << "Enter age:";
-        cin >> temp.age;
-        cout << "Enter username:";
-        cin >> temp.username;
-        cout << "Enter password:";
-        cin >> temp.password;
-        if (ValidationUsername(temp.username)) {
-            if (!searchUser(temp.username)) {
-                if (ValidationName(temp.firstName) && ValidationName(temp.lastName)) {
-                    if (ValidationAge(temp.age) && ValidationPassword(temp.password)) {
+//        cout << "Enter Firstname:";
+//        cin >> temp.firstName;
+//        cout << "Enter Lastname:";
+//        cin >> temp.lastName;
+//        cout << "Enter age:";
+//        cin >> temp.age;
+//        cout << "Enter username:";
+//        cin >> temp.username;
+//        cout << "Enter password:";
+//        cin >> temp.password;
+        if (ValidationUsername(username)) {
+            if (!searchUser(username)) {
+                if (ValidationName(firstName) && ValidationName(lastName)) {
+                    if (ValidationAge(age) && ValidationPassword(password)) {
                         Data.clear();
                         //write new data in file
-                        Data << left << setw(20) << temp.firstName
-                             << setw(20) << temp.lastName
-                             << setw(4) << temp.age
-                             << setw(15) << temp.username
-                             << setw(15) << temp.password << endl;
+                        Data << left << setw(20) << firstName
+                             << setw(20) << lastName
+                             << setw(4) << age
+                             << setw(15) << username
+                             << setw(15) << password << endl;
                     }
                 }
             } else {
-                cout << "username is already in use" << endl;
+//            cout << "username is already in use" << endl;
+                throw invalid_argument("username is already in use");
             }
         } else {
-            cout << "Username is not valid" << endl;
+//            cout << "Username is not valid" << endl;
+            throw invalid_argument("Username is not valid");
         }
     } else {
-        cerr << "Can not open the file!" << endl;
+//       cerr << "Can not open the file!" << endl;
+             throw invalid_argument("Can not open the file!");
     }
-    cout << "user added" << endl;
+  // cout << "user added" << endl;
     Data.close();
 }
+
 
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 void ManageKids::deletePerson(string username) {
-    try {
+//    try {
         if (searchUser(username)) {
 
-            ifstream Data("./userData.txt", ios::in); //open file
+            ifstream Data("../build/userData.txt", ios::in); //open file
             if (Data.is_open()) {
                 Data.clear();
-                ofstream Datacopy("./userDatacopy.txt", ios::out); //open new file
+                ofstream Datacopy("../build/userDatacopy.txt", ios::out); //open new file
                 if (!Datacopy.is_open()) {
                     cout << "Can not open the file!!!!!" << endl;
                 }
@@ -124,29 +128,29 @@ void ManageKids::deletePerson(string username) {
                 Datacopy.close();
             }
             Data.close();
-            remove("./userData.txt");
-            rename("./userDatacopy.txt", "./userData.txt");
+            remove("../build/userData.txt");
+            rename("../build/userDatacopy.txt", "../build/userData.txt");
             cout << "user deleted" << endl;
         } else {
             throw invalid_argument("User is not exist");
         }
-    }
-    catch (invalid_argument &e)
-    {
-        cout<<e.what()<<endl;
-    }
+//    }
+//    catch (invalid_argument &e)
+//    {
+//        cout<<e.what()<<endl;
+//    }
 }
 
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-void ManageKids::editPerson(string username) {
-    try
-    {
+void ManageKids::editPerson(string username,string item,int Selection) {
+//    try
+//    {
     if (searchUser(username)) {
-        fstream Data("./userData.txt", ios::in | ios::out); //open file
+        fstream Data("../build/userData.txt", ios::in | ios::out); //open file
         if (Data.is_open()) {
             Data.clear();
-            ofstream Datacopy("./userDatacopy.txt", ios::out); //open new file
+            ofstream Datacopy("../build/userDatacopy.txt", ios::out); //open new file
             if (!Datacopy.is_open()) {
                 cout << "Can not open the file!!!!!" << endl;
             }
@@ -161,52 +165,66 @@ void ManageKids::editPerson(string username) {
                     break;
                 } else {
                     if (user.username == username) {
-                        cout << "What do you want to change?" << endl;
-                        cout << "1:Username" << endl;
-                        cout << "2:Password" << endl;
-                        cout << "3:Firstname" << endl;
-                        cout << "4:Lastname" << endl;
-                        cout << "5:Age" << endl;
-                        int Selection; //to receive user selection
-                        cin >> Selection;
-                        string change;
-                        int age;
+//                        cout << "What do you want to change?" << endl;
+//                        cout << "1:Username" << endl;
+//                        cout << "2:Password" << endl;
+//                        cout << "3:Firstname" << endl;
+//                        cout << "4:Lastname" << endl;
+//                        cout << "5:Age" << endl;
+//                       int Selection; //to receive user selection
+//                        cin >> Selection;
+//                        string change;
+//                        int age;
                         switch (Selection) {
-                            case 1: {
-                                cin >> change;
-                                if (ValidationUsername(change)) {
-                                    user.username = change;
+                            case 0: {
+//                                cin >> change;
+                                if (ValidationUsername(item)) {
+                                    user.username = item;
                                 } else {
-                                    cout << "user deleted" << endl;
+//                                    cout << "user deleted" << endl;
+                                    throw invalid_argument("error");
+                                }
+                                break;
+                            }
+                            case 1: {
+//                                cin >> change;
+                                if (ValidationPassword(item)) {
+                                    user.password = item;
+                                }
+                               else {
+                                    throw invalid_argument("error");
                                 }
                                 break;
                             }
                             case 2: {
-                                cin >> change;
-                                if (ValidationPassword(change)) {
-                                    user.password = change;
+//                                cin >> change;
+                                if (ValidationName(item)) {
+                                    user.firstName = item;
                                 }
+                                else {
+                                     throw invalid_argument("error");
+                                 }
                                 break;
                             }
                             case 3: {
-                                cin >> change;
-                                if (ValidationName(change)) {
-                                    user.firstName = change;
+//                                cin >> change;
+                                if (ValidationName(item)) {
+                                    user.lastName = item;
                                 }
+                                else {
+                                     throw invalid_argument("error");
+                                 }
                                 break;
                             }
                             case 4: {
-                                cin >> change;
-                                if (ValidationName(change)) {
-                                    user.lastName = change;
-                                }
-                                break;
-                            }
-                            case 5: {
-                                cin >> age;
+//                                cin >> age;
+                            int age=stoi(item);
                                 if (ValidationAge(age)) {
                                     user.age = age;
                                 }
+                                else {
+                                     throw invalid_argument("error");
+                                 }
                                 break;
                             }
                             default: {
@@ -232,23 +250,23 @@ void ManageKids::editPerson(string username) {
             Datacopy.close();
         }
         Data.close();
-        remove("./userData.txt");
-        rename("./userDatacopy.txt", "./userData.txt");
+        remove("../build/userData.txt");
+        rename("../build/userDatacopy.txt", "../build/userData.txt");
     } else {
         throw invalid_argument("User is not exist");
     }
-}
-    catch (invalid_argument &e)
-    {
-        cout<<e.what()<<endl;
-    }
+//}
+//    catch (invalid_argument &e)
+//    {
+//        cout<<e.what()<<endl;
+//    }
 
 }
 
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
 void ManageKids::printPerson() {
-    ifstream Data("./userData.txt", ios::in); //open file
+    ifstream Data("../build/userData.txt", ios::in); //open file
     if (Data.is_open()) {
 
         while (1) {

@@ -23,5 +23,13 @@
         <file>../assets/2.jpg</file>
         <file>../assets/1.jpg</file>
         <file>../assets/3.jpg</file>
+        <file>Manage.qml</file>
+        <file>../assets/wave1.png</file>
+        <file>../assets/wave2.png</file>
+        <file>../assets/wave3.png</file>
+        <file>../assets/wave4.png</file>
+        <file>../assets/delete.png</file>
+        <file>../assets/Add.png</file>
+        <file>../assets/edit.png</file>
     </qresource>
 </RCC>
