@@ -31,5 +31,6 @@
         <file>../assets/delete.png</file>
         <file>../assets/Add.png</file>
         <file>../assets/edit.png</file>
+        <file>../build/userData.txt</file>
     </qresource>
 </RCC>

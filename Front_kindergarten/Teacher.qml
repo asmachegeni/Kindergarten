@@ -9,6 +9,7 @@ ApplicationWindow {
     visible: true
     color: "#EDE7F6"
     signal backhome
+
     Connections {
         target: MyHandler
         onCorrecthomework: {

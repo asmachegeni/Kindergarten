@@ -148,6 +148,7 @@ release/qrc_qml.cpp: ../Front_kindergarten/qml.qrc \
 		../Front_kindergarten/HomeworkPage.qml \
 		../Front_kindergarten/Game.qml \
 		../Front_kindergarten/main.qml \
+		../build/userData.txt \
 		../assets/close.png \
 		../assets/happy1.png \
 		../assets/wave1.png \

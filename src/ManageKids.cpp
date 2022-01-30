@@ -67,7 +67,7 @@ void ManageKids::addPerson(string firstName,string lastName,int age,string usern
                     if (ValidationAge(age) && ValidationPassword(password)) {
                         Data.clear();
                         //write new data in file
-                        Data << left << setw(20) << firstName
+                        Data << setw(20) << firstName
                              << setw(20) << lastName
                              << setw(4) << age
                              << setw(15) << username
@@ -232,14 +232,14 @@ void ManageKids::editPerson(string username,string item,int Selection) {
                                 break;
                             }
                         }
-                        Datacopy << left << setw(20) << user.firstName
+                        Datacopy << setw(20) << user.firstName
                                  << setw(20) << user.lastName
                                  << setw(4) << user.age
                                  << setw(15) << user.username
                                  << setw(15) << user.password
                                  << endl; //read data from file
                     } else {
-                        Datacopy << left << setw(20) << user.firstName
+                        Datacopy << setw(20) << user.firstName
                                  << setw(20) << user.lastName
                                  << setw(4) << user.age
                                  << setw(15) << user.username
@@ -282,7 +282,7 @@ void ManageKids::printPerson() {
             } else {
                 if (user.username != "MA1425") //to not print manager information
                 {
-                    cout << left << setw(20) << user.firstName
+                    cout  << setw(20) << user.firstName
                          << setw(20) << user.lastName
                          << setw(4) << user.age
                          << setw(15) << user.username

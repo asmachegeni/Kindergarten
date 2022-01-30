@@ -85,12 +85,18 @@ this->n2=n2;
 //--------------------------------------------------------------
 int Handler::getnum1()
 {
+    Child ch(login.getFirstName(),5);
+    ch.readFromFile();
+    setnum1(ch.getNum1());
     return  this->n1;
 }
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 int Handler::getnum2()
 {
+    Child ch(login.getFirstName(),5);
+    ch.readFromFile();
+    setnum2(ch.getNum2());
     return  this->n2;
 }
 //--------------------------------------------------------------

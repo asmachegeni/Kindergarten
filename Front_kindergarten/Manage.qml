@@ -15,36 +15,42 @@ ApplicationWindow {
             image10.opacity = 1
             element10.opacity = 1
             rectangle10.opacity = 1
+            console.log("delet")
         }
         onDeleteUnsuccessful: {
             element10.text = "There is no user with this username"
             image10.opacity = 1
             element10.opacity = 1
             rectangle10.opacity = 1
+            console.log("UNdelet")
         }
         onAddSuccessful: {
             element10.text = "User successfully added"
             image10.opacity = 1
             element10.opacity = 1
             rectangle10.opacity = 1
+            console.log("Add")
         }
         onAddUnsuccessful: {
             element10.text = "The information entered is not valid"
             image10.opacity = 1
             element10.opacity = 1
             rectangle10.opacity = 1
+            console.log("UNAdd")
         }
         onEditSuccessful: {
             element10.text = "Changes applied successfully"
             image10.opacity = 1
             element10.opacity = 1
             rectangle10.opacity = 1
+            console.log("edit")
         }
         onEditUnsuccessful: {
             element10.text = "username or information entered is incorrect"
             image10.opacity = 1
             element10.opacity = 1
             rectangle10.opacity = 1
+            console.log("UNedit")
         }
     }
     Rectangle {
@@ -122,9 +128,10 @@ ApplicationWindow {
                     button2.visible = false
                     image5.visible = false
 
-                    image10.visible = false
-                    element10.visible = false
-                    rectangle10.visible = false
+                    image10.opacity = 0
+                    element10.opacity = 0
+                    rectangle10.opacity = 0
+                    //                    textEdit.visible = false
                 }
             }
         }
@@ -219,6 +226,7 @@ ApplicationWindow {
                 image10.opacity = 0
                 element10.opacity = 0
                 rectangle10.opacity = 0
+                //                textEdit.visible = false
             }
         }
 
@@ -229,7 +237,6 @@ ApplicationWindow {
             width: 100
             height: 61
             onClicked: {
-
                 comboBox.visible = true
                 textField6.visible = true
                 textField7.visible = true
@@ -256,8 +263,47 @@ ApplicationWindow {
                 image10.opacity = 0
                 element10.opacity = 0
                 rectangle10.opacity = 0
+                //                textEdit.visible = false
             }
         }
+
+        //        MouseArea {
+        //            id: mouseArea4
+        //            x: 114
+        //            y: 628
+        //            width: 100
+        //            height: 67
+        //            onClicked: {
+        //                textEdit.text = openFile("qrc/../build/userData.txt")
+        //                comboBox.visible = false
+        //                textField6.visible = false
+        //                textField7.visible = false
+        //                button3.visible = false
+        //                element6.visible = false
+        //                element7.visible = false
+        //                element8.visible = false
+        //                image6.visible = false
+
+        //                element5.visible = false
+        //                textField1.visible = false
+        //                textField2.visible = false
+        //                textField3.visible = false
+        //                textField4.visible = false
+        //                textField5.visible = false
+        //                button2.visible = false
+        //                image5.visible = false
+
+        //                element4.visible = false
+        //                textField.visible = false
+        //                button1.visible = false
+        //                image4.visible = false
+
+        //                image10.opacity = 0
+        //                element10.opacity = 0
+        //                rectangle10.opacity = 0
+        ////                textEdit.visible = true
+        //            }
+        //        }
     }
 
     Rectangle {
@@ -269,6 +315,7 @@ ApplicationWindow {
         color: "#673AB7"
         radius: 10
         opacity: 0
+        visible: true
 
         Text {
             id: element10
@@ -277,7 +324,8 @@ ApplicationWindow {
             text: qsTr("There is no user with this username")
             font.pixelSize: 25
             color: "#fff"
-            visible: false
+            opacity: 0
+            visible: true
         }
 
         Image {
@@ -288,7 +336,8 @@ ApplicationWindow {
             height: 33
             source: "../assets/close.png"
             fillMode: Image.PreserveAspectFit
-            visible: false
+            visible: true
+            opacity: 0
         }
 
         MouseArea {
@@ -304,6 +353,27 @@ ApplicationWindow {
             }
         }
     }
+    //------------------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------------------
+    //for print
+    //    function openFile(fileUrl) {
+    //        var request = new XMLHttpRequest()
+    //        request.open("GET", fileUrl, false)
+    //        request.send()
+    //        return request.responseText
+    //    }
+    //    Text {
+    //        id: textEdit
+    //        x: 191
+    //        y: 110
+    //        width: 1087
+    //        height: 667
+    //        style: Text.Sunken
+    //        font.pixelSize: 25
+    //        visible: false
+    //        color: "#311B92"
+    //    }
+
     //----------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------
     //for delete
@@ -326,7 +396,26 @@ ApplicationWindow {
         placeholderText: qsTr("")
         visible: false
     }
-
+    //    Timer {
+    //        id: timer
+    //        repeat: false
+    //        interval: 3000
+    //        running: true
+    //        onTriggered: {
+    //            textEdit.text = openFile("qrc/../build/userData.txt")
+    //            console.log("open")
+    //        }
+    //    }
+    //    Timer {
+    //        id: timer1
+    //        repeat: false
+    //        interval: 3000
+    //        running: true
+    //        onTriggered: {
+    //            saveFile("qrc/../build/userData.txt", textEdit.text)
+    //            console.log("save")
+    //        }
+    //    }
     Button {
         id: button1
         x: 889
@@ -343,7 +432,9 @@ ApplicationWindow {
             radius: 10
             color: "#673AB7"
         }
-        onClicked: MyHandler.deleteuser(textField.text)
+        onClicked: {
+            MyHandler.deleteuser(textField.text)
+        }
     }
 
     Image {
@@ -424,9 +515,12 @@ ApplicationWindow {
             radius: 10
             color: "#673AB7"
         }
-        onClicked: MyHandler.adduser(textField1.text, textField2.text,
-                                     textField5.text, textField3.text,
-                                     textField4.text)
+        onClicked: {
+            MyHandler.adduser(textField1.text, textField2.text,
+                              textField5.text, textField3.text, textField4.text)
+            //            timer.start()
+            //            timer1.start()
+        }
     }
 
     Text {
