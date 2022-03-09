@@ -1,5 +1,4 @@
 # Kindergarten
-## This project is related to the advanced programming project of Bu Ali Sina University.
 ## In this project, a kindergarten is managed.
 ### This program is intended for three types of users: 1- Administrator 2- Teacher 3- Child
 ### Users enter their username and password to log in to the app
